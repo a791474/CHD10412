@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,html{
+            height: 100%;
+            font-family: "Microsoft JhengHei"
+        }
+        .all{
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+        .banner{
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+          color: #3F5D45;
+          background-color: #EAF0ED;
+        }
+        .menu{
+          display: flex;
+          flex: 0 0 80px;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 50px;
+        }
+        .menu ul{
+          display: flex;
+        }
+        .menu ul li{
+          padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="banner">
+          <img src="https://pei-qun.github.io/Sweetaste/img/flex-ex-img1.svg" width="150" alt="">
+          <p>今天是個吃甜點的好日子。</p>
+        </div>
+        <div class="menu">
+          <img src="https://pei-qun.github.io/Sweetaste/img/flex-ex-img3.svg" width="200" alt="">
+          <ul>
+            <li>回首頁</li>
+            <li>關於我們</li>
+            <li>產品介紹</li>
+            <li>聯絡我們</li>
+          </ul>
+        </div>
+      </div>
+</body>
+</html>
