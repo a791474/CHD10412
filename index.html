@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>たかぎ じき</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/grid.css">
     <script src="https://kit.fontawesome.com/080f2811bc.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -27,12 +27,12 @@
                     </ul>
                 </nav>
                 <a href="#">
-                    <i class="fa-solid fa-user" style="color: #000000;"></i>
+                    <i class="fa-solid fa-user"></i>
                 </a>
                 <a href="#">
-                    <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
                 </a>
-                    <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" placeholder="搜尋商品..." id="searchbar">
             </div>
         </div>
@@ -47,22 +47,22 @@
 <div class="shop_section">
     <h2>商品分類</h2>
     <div class="category">
-        <div class="category_pic1">
+        <div class="category_pic">
             <a href="#">
                 <img src="imgs/和風系列.png" alt="和風系列">
             </a>
         </div>
-        <div class="category_pic2">
+        <div class="category_pic">
             <a href="#">
                 <img src="imgs/洋風系列.png" alt="洋風系列">
             </a>
         </div>
-        <div class="category_pic3">
+        <div class="category_pic">
             <a href="#">
                 <img src="imgs/花瓶系列.png" alt="花瓶系列">
             </a>
         </div>
-        <div class="category_pic4">
+        <div class="category_pic">
             <a href="#">
                 <img src="imgs/漆器系列.png" alt="漆器系列">
             </a>
@@ -72,32 +72,32 @@
 <div class="new_arrival">
     <h2>新品上市</h2>
     <div class="products">
-        <div class="prod_1">
+        <div class="prod">
             <a href="#">
                 <img src="imgs/相馬燒夫婦茶杯-左上(遮罩).png" alt="">
             </a>
         </div>
-        <div class="prod_2">
+        <div class="prod">
             <a href="#">
                 <img src="imgs/大倉陶園花瓶-中上(遮罩).png" alt="">
             </a>
         </div>
-        <div class="prod_3">
+        <div class="prod">
             <a href="#">
                 <img src="imgs/木雕刻壁掛鏡-右上(遮罩).png" alt="">
             </a>
         </div>
-        <div class="prod_4">
+        <div class="prod">
             <a href="#">
                 <img src="imgs/貓頭鷹瓷擺飾-左下(遮罩).png" alt="">
             </a>
         </div>
-        <div class="prod_5">
+        <div class="prod">
             <a href="#">
                 <img src="imgs/紅漆器盤-中下(遮罩).png" alt="">
             </a>
         </div>
-        <div class="prod_6">
+        <div class="prod">
             <a href="#">
                 <img src="imgs/紀念盤-右下(遮罩).png" alt="">
             </a>
@@ -119,7 +119,7 @@
                 <p class="card_info">其實在日本有很多二手店，在那裡經常能淘到...</p>
                 <div class="card_footer">
                     <span class="date">2023-08-03</span>
-                    <span class="continue_read">繼續閱讀</span>
+                    <a href="#" class="continue_read">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -132,7 +132,7 @@
                 <p class="card_info">台北市中山北路二段22之2號...</p>
                 <div class="card_footer">
                     <span class="date">2023-10-13</span>
-                    <span class="continue_read">繼續閱讀</span>
+                    <a href="#" class="continue_read">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -145,7 +145,7 @@
                 <p class="card_info">在追求獨特和精緻的生活品味中，瓷器作為一種...</p>
                 <div class="card_footer">
                     <span class="date">2023-11-01</span>
-                    <span class="continue_read">繼續閱讀</span>
+                    <a href="#" class="continue_read">繼續閱讀</a>
                 </div>
             </div>
         </div>
@@ -154,64 +154,62 @@
         </a>
     </div>
 </div>
+
 <footer>
     <div class="f_container">
         <div class="footer_navbar">
-            <div class="col-12 col-md-3" id="f_nav">
+            <nav>
                 <ul>
-                    <li>
-                        <a href="#">關於我們</a>
-                    </li>
+                    <li class="f_item"><a href="#">關於我們</a></li>
+                    <li class="f_item"><a href="#">最新消息</a></li>
+                    <li class="f_item"><a href="#">全部商品</a></li>
+                    <li class="f_item"><a href="#">聯絡我們</a></li>
                 </ul>
-            </div>
-            <div class="col-12 col-md-3" id="f_nav">
-                <ul>
-                    <li>
-                        <a href="#">最新消息</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-12 col-md-3" id="f_nav">
-                <ul>
-                    <li>
-                        <a href="#">全部商品</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-12 col-md-3" id="f_nav">
-                <ul>
-                    <li>
-                        <a href="#">聯絡我們</a>
-                    </li>
-                </ul>
-            </div>
+            </nav>
+            <!-- <nav>
+                <div class="col-12 col-md-3" id="f_nav">
+                    <ul><li><a href="#">關於我們</a></li></ul>
+                </div>
+                <div class="col-12 col-md-3" id="f_nav">
+                    <ul><li><a href="#">最新消息</a></li></ul>
+                </div>
+                <div class="col-12 col-md-3" id="f_nav">
+                    <ul><li><a href="#">全部商品</a></li></ul>
+                </div>
+                <div class="col-12 col-md-3" id="f_nav">
+                    <ul><li><a href="#">聯絡我們</a></li></ul>
+                </div>
+            </nav> -->
         </div>
-        <div class="store_info">
-            <p>客服時間：11:00-19:00</p>
-            <p>客服專線：02-26278566</p>
-            <p>信箱：takaginet@gmail.com</p>
-        </div>
-        <div class="account_link">
-            <a href="#">
-                <i class="fa-brands fa-facebook" style="color: #000000;"></i>
-            </a>
-            <a href="#">
-                <i class="fa-brands fa-instagram" style="color: #000000;"></i>
-            </a>
-            <a href="#">
-                <i class="fa-brands fa-twitter" style="color: #000000;"></i>
-            </a>
-        </div>
-        <div class="f_logo">
-            <img src="imgs/index_footer_logo.png" alt="logo">
-        </div>
-        <div class="f_text">
-            <p>註冊以獲取所有最新信息新聞和優惠</p>
-            <div class="input_group">
-                <input type="email" placeholder="E-mail">
-                <button class="l_send_email">
-                    <i class="fa-solid fa-angle-right" style="color: #000000;"></i>
-                </button>
+        <div class="f_middle">
+            <div class="info_icon">
+                <p>客服時間：11:00-19:00</p>
+                <p>客服專線：02-26278566</p>
+                <p>信箱：takaginet@gmail.com</p>
+            
+            </div>
+            <div class="account_link">
+                <a href="#" style="text-decoration: none;">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#" style="text-decoration: none;">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" style="text-decoration: none;">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </div>
+            <div class="f_logo">
+                <img src="imgs/index_footer_logo.png" alt="logo">
+            </div>
+            <div class="f_text">
+                <p>註冊以獲取所有最新信息新聞和優惠</p>
+                <div class="input_group">
+                    <input type="email" placeholder="E-mail">
+                    <a href="#">
+                        <i class="fa-solid fa-angle-right email_send"></i>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="copyright">

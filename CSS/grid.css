@@ -1,43 +1,75 @@
-.category {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-left: 240px;
-    margin-right: 240px;
+/* ↓創造一個選取器↓ 意思為只要遇到叫做col-的class都做box-sizing、padding的屬性*/
+[class*="col-"]{ box-sizing: border-box; padding: 0 10px;}
+/* 給最外面父層的值 */
+.col-1{width: 8.333333%;}
+.col-2{width: 16.666666%;}
+.col-3{width: 25%;}
+.col-4{width: 33.333333%;}
+.col-5{width: 41.666666%;}
+.col-6{width: 50%;}
+.col-7{width: 58.333333%;}
+.col-8{width: 66.666666%;}
+.col-9{width: 75%;}
+.col-10{width: 83.333333%;}
+.col-11{width: 91.666666%;}
+.col-12{width: 100%;}
+/* ↓768px~1024之間觸發↓ */
+@media (min-width:768px){
+    .col-md-1{width: 8.333333%;}
+    .col-md-2{width: 16.666666%;}
+    .col-md-3{width: 25%;}
+    .col-md-4{width: 33.333333%;}
+    .col-md-5{width: 41.666666%;}
+    .col-md-6{width: 50%;}
+    .col-md-7{width: 58.333333%;}
+    .col-md-8{width: 66.666666%;}
+    .col-md-9{width: 75%;}
+    .col-md-10{width: 83.333333%;}
+    .col-md-11{width: 91.666666%;}
+    .col-md-12{width: 100%;}
 }
-.category_pic1, .category_pic2, .category_pic3, .category_pic4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* ↓1024px~1200px之間觸發↓ */
+@media (min-width:1024px){
+    .col-lg-1{width: 8.333333%;}
+    .col-lg-2{width: 16.666666%;}
+    .col-lg-3{width: 25%;}
+    .col-lg-4{width: 33.333333%;}
+    .col-lg-5{width: 41.666666%;}
+    .col-lg-6{width: 50%;}
+    .col-lg-7{width: 58.333333%;}
+    .col-lg-8{width: 66.666666%;}
+    .col-lg-9{width: 75%;}
+    .col-lg-10{width: 83.333333%;}
+    .col-lg-11{width: 91.666666%;}
+    .col-lg-12{width: 100%;}
 }
-
-.category_pic1 img, .category_pic2 img, .category_pic3 img, .category_pic4 img {
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    margin: auto;
+/* ↓1200px~1440px之間觸發↓ */
+@media (min-width:1200px){
+    .col-xl-1{width: 8.333333%;}
+    .col-xl-2{width: 16.666666%;}
+    .col-xl-3{width: 25%;}
+    .col-xl-4{width: 33.333333%;}
+    .col-xl-5{width: 41.666666%;}
+    .col-xl-6{width: 50%;}
+    .col-xl-7{width: 58.333333%;}
+    .col-xl-8{width: 66.666666%;}
+    .col-xl-9{width: 75%;}
+    .col-xl-10{width: 83.333333%;}
+    .col-xl-11{width: 91.666666%;}
+    .col-xl-12{width: 100%;}
 }
-.products{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr);
-    gap: 20px;
-    margin-left: 240px;
-    margin-right: 240px;
-}
-.prod_1, .prod_2, .prod_3, .prod_4, .prod_5, .prod_6{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-.prod_1 img, .prod_2 img, .prod_3 img, .prod_4 img, .prod_5 img, .prod_6 img{
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    margin: auto;
-}
-.article{
-    display: flex;
-    flex-direction: row;
+/* ↓1440px以上觸發↓ */
+@media (min-width:1440px){
+    .col-xxl-1{width: 8.333333%;}
+    .col-xxl-2{width: 16.666666%;}
+    .col-xxl-3{width: 25%;}
+    .col-xxl-4{width: 33.333333%;}
+    .col-xxl-5{width: 41.666666%;}
+    .col-xxl-6{width: 50%;}
+    .col-xxl-7{width: 58.333333%;}
+    .col-xxl-8{width: 66.666666%;}
+    .col-xxl-9{width: 75%;}
+    .col-xxl-10{width: 83.333333%;}
+    .col-xxl-11{width: 91.666666%;}
+    .col-xxl-12{width: 100%;}
 }
