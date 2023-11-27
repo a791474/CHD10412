@@ -230,7 +230,6 @@ footer{
 .f_logo img{
     display: block;
     width: 100%;
-    vertical-align: top;
 }
 .account_link{
     position: absolute;
