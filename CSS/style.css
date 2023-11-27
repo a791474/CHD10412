@@ -12,19 +12,19 @@ header{
     width: 100%;
     height: 43.8vw;
 }
-.top-header{
+.index-top-header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: rgba(217,217,217,50%);
 }
-.navbar{
+.index-navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
     /* padding: 0 50px; */
 }
-.navbar nav ul{
+.index-navbar nav ul{
     display: flex;
     list-style: none;
 }
@@ -35,10 +35,10 @@ header{
     text-decoration: none;
     font-family: "DFFangSongW6-B5";
 }
-.logo{
+.index-logo{
     width: 200px;
 }
-.logo img{
+.index-logo img{
     width: 100%;
 }
 i{
@@ -52,13 +52,13 @@ div input{
     font-family: "DFFangSongW6-B5";
     height: 20px;
 }
-p.CHT{
+.index-banner .title p.CHT{
     display: block;
-    font-size: 22px;
-    margin-top: 150px;
+    font-size: 40px;
+    margin-top: 200px;
     margin-left: 170px;
     font-family: "DFFangSongW6-B5";
-}
+}   
 /* index-shop-section */
 .shop_section h2{
     margin-top: 62px;
@@ -262,3 +262,57 @@ footer{
     bottom: -6px;
 }
 /* 關於我們 CSS */
+div.about_us{
+    background-image: url(../imgs/about\,news\,shop_bg.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    width: 100%;
+    height: 43.8vw;
+}
+.top-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(217,217,217,50%);
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 0 50px; */
+}
+.navbar nav ul{
+    display: flex;
+    list-style: none;
+}
+.items a{
+    padding: 16px;
+    color: rgba(0,0,0,0.8);
+    font-size: 18px;
+    text-decoration: none;
+    font-family: "DFFangSongW6-B5";
+}
+.logo{
+    width: 200px;
+}
+.logo img{
+    width: 100%;
+}
+i{
+    font-size: 22px;
+    padding: 10px;
+    color: #000;
+}
+div input{
+    background-color: rgba(217,217,217,50%);
+    border-radius: 30px;
+    font-family: "DFFangSongW6-B5";
+    height: 20px;
+}
+p.CHT{
+    display: block;
+    font-size: 40px;
+    margin-top: 130px;
+    margin-left: 250px;
+    font-family: "DFFangSongW6-B5";
+}   
