@@ -317,7 +317,7 @@ p.CHT{
     display: block;
     font-size: 40px;
     margin-top: 130px;
-    margin-left: 250px;
+    margin-left: 260px;
     font-family: "DFFangSongW6-B5";
 }
 /* 關於我們 body */
@@ -354,7 +354,6 @@ div.about_text p{
     letter-spacing: 2px;
 }
 div.about_address p{
-    border: 1px solid red;
     width: 588px;
     height: 330px;
     font-size: 20px;
