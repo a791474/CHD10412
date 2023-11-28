@@ -100,23 +100,24 @@ div input{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
-    gap: 20px;
-    margin-left: 240px;
-    margin-right: 240px;
+    row-gap: 20px;
+    justify-items: center;
+    margin-inline: 240px;
     position: relative;
 }
 .prod{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    width: 314px;
+    height: 519px;
 }
 .prod img{
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    margin: auto;
+    width: 100%;
+    /* margin: auto; */
 }
+/* index-news */
 .new_arrival h2{
     margin-top: 90px;
     margin-bottom: 90px;
@@ -124,10 +125,6 @@ div input{
     text-align: center;
     font-family: "DFFangSongW6-B5";
 }
-.products a img{
-    width: 100%;
-}
-/* index-news */
 .news{
     /* border: 1px solid #000; */
     position: relative;
@@ -151,6 +148,7 @@ div input{
 .card{
     width: 400px;
     height: 400px;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 .card_title{
     font-size: 20px;
@@ -160,8 +158,7 @@ div input{
 .card_info{
     font-size: 16px;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-block: 10px;
 }
 .card_footer{
     display: flex;
@@ -181,7 +178,8 @@ div input{
     letter-spacing: 5px;
     color: #000;
     text-decoration: none;
-    position: absolute; bottom: 0; right: 0;
+    position: absolute;
+    bottom:0; right:0;
 }
 /* index-footer */
 footer{
@@ -196,8 +194,8 @@ footer{
     position: relative;
 }
 .footer_navbar{
-    position: relative;
     margin: auto;
+    position: relative;
     padding-block: 30px;
 }
 .footer_navbar nav ul{
@@ -207,6 +205,7 @@ footer{
 }
 .footer_navbar nav ul a{
     font-size: 20px;
+    font-family: 'Noto Sans TC', sans-serif;
     color: #000;
     text-decoration: none;
 }
@@ -218,8 +217,14 @@ footer{
 }
 .store_info{
     font-size: 20px;
-    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
     line-height: 30px;
+    text-align: center;
+}
+.account_link{
+    position: absolute;
+    left: 350px;
+    bottom: -15px;
 }
 .f_logo{
     display: block;
@@ -230,27 +235,13 @@ footer{
     display: block;
     width: 100%;
 }
-.account_link{
-    position: absolute;
-    left: 350px;
-    bottom: -15px;
-}
-.copyright{
-    display: block;
-    height: 100%;
-    padding-top: 20px;
-}
-.copyright p{
-    padding: 10px;
-    text-align: center;
-    letter-spacing: 1px;
-}
 .f_text{
     display: block;
 }
 .f_text p{
     font-size: 18px;
     padding-bottom: 12px;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 .input_group{
     position: relative;
@@ -261,6 +252,17 @@ footer{
     position: absolute;
     left: 130px;
     bottom: -6px;
+}
+.copyright{
+    display: block;
+    height: 100%;
+    padding-top: 20px;
+}
+.copyright p{
+    padding: 10px;
+    font-family: 'Noto Sans TC', sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
 }
 /* 關於我們 CSS */
 .container{
@@ -340,6 +342,7 @@ div.about_text{
     width: 588px;
     height: 276px;
     display: block;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 div.about_text h3{
     width: 467px;
@@ -358,6 +361,7 @@ div.about_address p{
     height: 330px;
     font-size: 20px;
     text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
     line-height: 84px;
     letter-spacing: 2px;
 }
@@ -372,3 +376,6 @@ div.about_map iframe{
     height: 100%;
     position: absolute;
 }
+/* 最新消息 CSS */
+
+/* 聯絡我們 CSS */
