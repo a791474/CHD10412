@@ -1,6 +1,6 @@
 *{box-sizing: border-box;}
 /* index首頁CSS */
-.container{
+.index-container{
     height: 100%;
     display: flex;
 }
@@ -216,11 +216,10 @@ footer{
     justify-content: space-evenly;
     position: relative;
 }
-.info_icon{
+.store_info{
     font-size: 20px;
     text-align: center;
     line-height: 30px;
-    
 }
 .f_logo{
     display: block;
@@ -234,10 +233,12 @@ footer{
 .account_link{
     position: absolute;
     left: 350px;
-    bottom: 0px;
+    bottom: -15px;
 }
 .copyright{
+    background-color: #fa0;
     display: block;
+    height: 100%;
 }
 .copyright p{
     padding: 10px;
@@ -262,12 +263,15 @@ footer{
     bottom: -6px;
 }
 /* 關於我們 CSS */
+.container{
+    height: 100%;
+}
 div.about_us{
     background-image: url(../imgs/about\,news\,shop_bg.png);
     background-repeat: no-repeat;
     background-size:contain;
     width: 100%;
-    height: 43.8vw;
+    height: 25.8vw;
 }
 .top-header{
     display: flex;
@@ -315,4 +319,57 @@ p.CHT{
     margin-top: 130px;
     margin-left: 250px;
     font-family: "DFFangSongW6-B5";
-}   
+}
+/* 關於我們 body */
+div.about_body{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 150px;
+    margin-left: 240px;
+    margin-right: 240px;
+    padding-block: 150px;
+}
+div.about_pic{
+    width: 588px;
+    height: 330px;
+}
+div.about_pic img{
+    width: 100%;
+}
+div.about_text{
+    width: 588px;
+    height: 276px;
+    display: block;
+}
+div.about_text h3{
+    width: 467px;
+    height: 96px;
+    font-size: 30px;
+}
+div.about_text p{
+    width: 588px;
+    height: 180px;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 2px;
+}
+div.about_address p{
+    border: 1px solid red;
+    width: 588px;
+    height: 330px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 84px;
+    letter-spacing: 2px;
+}
+div.about_map{
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.12%;
+    position: relative;
+}
+div.about_map iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
