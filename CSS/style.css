@@ -236,9 +236,9 @@ footer{
     bottom: -15px;
 }
 .copyright{
-    background-color: #fa0;
     display: block;
     height: 100%;
+    padding-top: 20px;
 }
 .copyright p{
     padding: 10px;
