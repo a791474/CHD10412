@@ -46,7 +46,7 @@ i{
     padding: 10px;
     color: #000;
 }
-div input{
+#searchbar{
     background-color: rgba(217,217,217,50%);
     border-radius: 30px;
     font-family: "DFFangSongW6-B5";
@@ -245,12 +245,15 @@ footer{
 }
 .input_group{
     position: relative;
-    align-content: center;
+}
+.input_group input{
+    border-radius: 10px;
+    background-color: #eee;
 }
 .input_group a i{
     font-size: 12px;
     position: absolute;
-    left: 130px;
+    left: 154px;
     bottom: -6px;
 }
 .copyright{
@@ -308,12 +311,6 @@ i{
     font-size: 22px;
     padding: 10px;
     color: #000;
-}
-div input{
-    background-color: rgba(217,217,217,50%);
-    border-radius: 30px;
-    font-family: "DFFangSongW6-B5";
-    height: 20px;
 }
 p.CHT{
     display: block;
@@ -377,5 +374,56 @@ div.about_map iframe{
     position: absolute;
 }
 /* 最新消息 CSS */
-
+div.contact_body{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-evenly;
+    max-width: 1440px;
+    height: 100%;
+    margin: 100px 240px;
+}
+div.contact_body input{
+    padding: 5px 15px;
+    background-color: #ddd;
+    border: none;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+div.left h2{
+    font-size: 24px;
+    font-family: 'Noto Sans TC', sans-serif;
+    letter-spacing: 5px;
+    padding: 10px;
+}
+.left{
+    width: 467px;
+    display: block;
+    padding: 10px;
+    line-height: 40px;
+}
+.right{
+    width: 467px;
+    display: block;
+    padding: 10px;
+    line-height: 30px;
+}
+div.left input{
+    width: 100%;
+    height: 40px;
+}
+div.right div.input_text textarea{
+    border: none;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    resize: none;
+    width: 100%;
+    background-color: #ddd;
+}
+div.input_submit input{
+    width: 90%;
+    height: 30px;
+    cursor: pointer;
+    margin: 10px 20px 0 0;  
+}
 /* 聯絡我們 CSS */

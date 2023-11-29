@@ -6,6 +6,7 @@
     <title>たかぎ じき</title>
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/grid.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
@@ -40,11 +41,48 @@
         </div>
         <div class="banner">
             <div class="title">
-                <p class="CHT">關於我們</p>
+                <p class="CHT">聯絡我們</p>
             </div>
         </div>
     </div>
-    
+    <div class="contact_body">
+        <div class="left">
+            <h2>聯絡表單</h2>
+            <div class="input_name">
+                <p>姓名</p>
+                <input type="text">
+            </div>
+            <div class="input_phone">
+                <p>連絡電話</p>
+                <input type="tel">
+            </div>
+            <div class="input_email">
+                <p>電子郵件</p>
+                <input type="email">
+            </div>
+        </div>
+        <div class="right">
+            <div class="select_Q">
+                <p>問題類型</p>
+                <select name="question" id="">
+                    <option value="請選擇您想問的類型">請選擇您想問的類型</option>
+                    <option value="退貨、退款問題">退貨、退款問題</option>
+                    <option value="費、寄送問題">運費、寄送問題</option>
+                    <option value="付款問題">付款問題</option>
+                    <option value="商品問題">商品問題</option>
+                    <option value="訂單問題">訂單問題</option>
+                    <option value="其它">其它</option>
+                </select>
+            </div>
+            <div class="input_text">
+                <p>訊息內容</p>
+                <textarea rows="6" cols="30"></textarea>
+            </div>
+            <div class="input_submit">
+                <input type="submit" id="contact_submit" value="送出">
+            </div>
+        </div>
+    </div>
 </div>
 
 <footer>
