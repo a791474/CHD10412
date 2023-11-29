@@ -323,10 +323,10 @@ p.CHT{
 div.about_body{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 150px;
+    gap: 180px;
     margin-left: 240px;
     margin-right: 240px;
-    padding-block: 150px;
+    padding-block: 180px;
 }
 div.about_pic{
     width: 588px;
@@ -374,6 +374,107 @@ div.about_map iframe{
     position: absolute;
 }
 /* 最新消息 CSS */
+.news_body{
+    max-width: 1920px;
+}
+.news_container{
+    padding: 20px;
+    max-width: 1440px;
+}
+.top{
+    width: 100%;
+    display: flex;
+    margin-left: 240px;
+    align-items: center;
+}
+.news_pic{
+    width: 830px;
+    height: 540px;
+    /* margin-right: 225px; */
+    border: 1px solid #000;
+}
+.news_pic img{
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+}
+div.rside{ 
+    width: 570px;
+    display: flex;
+    flex-direction: column;
+    /* margin-right:240px; */
+    font-family: 'Noto Sans TC', sans-serif;
+}
+div.rside h3{
+    font-size: 30px;
+    font-weight: bold;
+}
+div.rside_title{
+    height: 180px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+div.rside_text{
+    height: 220px;
+    line-height: 28px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+div.rside_read_more{
+    height: 140px;
+    font-size: 40px;
+    line-height: 50px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+div.rside_read_more a:link{
+    color: #000;
+    text-decoration: none;
+}
+div.rside_read_more a:visited{
+    background-color: #f00;
+}
+div.rside_read_more a:hover{
+    text-decoration: underline; 
+}
+.under{
+    border: 1px solid #000;
+    width: 100%;
+    padding: 10px;
+    margin-left: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.other_article{
+    border: 1px solid #000;
+}
+.other_article_pic{
+    display: block;
+    width: 400px;
+    height: 277px;
+}
+.other_article_pic img{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+.arti_date{
+    padding: 5px;
+    font-size: 18px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.arti_title{
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.other_article:hover{
+    background-color: #EEE5DA;
+}
+/* 聯絡我們 CSS */
 div.contact_body{
     display: flex;
     flex-wrap: wrap;
@@ -426,4 +527,3 @@ div.input_submit input{
     cursor: pointer;
     margin: 10px 20px 0 0;  
 }
-/* 聯絡我們 CSS */
