@@ -529,8 +529,8 @@ div.input_submit input{
 }
 /* -------------全部商品------------- */
 /* -------------商品內頁------------- */
-/*-------------登入------------- */
-.login_container{
+/*-------------登入、註冊------------- */
+.login_container, .register_container{
     width: 500px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -553,6 +553,7 @@ fieldset input{
     border: none;
     border-bottom: 1px solid #000;
     width: 100%;
+    font-size: 16px;
     margin-bottom: 40px;
     padding: 5px 25px;
 }
@@ -601,4 +602,3 @@ fieldset button:hover{
     justify-content: center;
     gap: 48px;
 }
-/*-------------註冊-------------*/
