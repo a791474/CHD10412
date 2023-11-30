@@ -530,4 +530,75 @@ div.input_submit input{
 /* -------------全部商品------------- */
 /* -------------商品內頁------------- */
 /*-------------登入------------- */
+.login_container{
+    width: 500px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* max-width: 1440px; */
+    margin-inline: auto;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+fieldset legend{
+    font-size: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+fieldset input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 5px 25px;
+}
+fieldset button{
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+fieldset button:hover{
+    background-color: #222;
+}
+.member_link{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 40px;
+}
+.member_link a{
+    color: #000;
+    text-decoration: none;
+}
+.member_link a:hover{
+    text-decoration: underline;
+}
+.other_login{
+    width: 70%;
+    margin: auto;
+    padding-top: 35px;
+    border-top: 3px solid rgba(0,0,0,0.1);
+}
+.other_login h6{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.other_login .login_group{
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
 /*-------------註冊-------------*/
