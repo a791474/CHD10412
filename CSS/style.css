@@ -1,5 +1,5 @@
 *{box-sizing: border-box;}
-/* index首頁CSS */
+/*-------------index首頁-------------*/
 .index-container{
     height: 100%;
     display: flex;
@@ -267,7 +267,7 @@ footer{
     text-align: center;
     letter-spacing: 1px;
 }
-/* 關於我們 CSS */
+/*-------------關於我們-------------*/
 .container{
     height: 100%;
 }
@@ -319,7 +319,7 @@ p.CHT{
     margin-left: 260px;
     font-family: "DFFangSongW6-B5";
 }
-/* 關於我們 body */
+/*-------------關於我們-------------*/
 div.about_body{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -373,7 +373,7 @@ div.about_map iframe{
     height: 100%;
     position: absolute;
 }
-/* 最新消息 CSS */
+/*-------------最新消息-------------*/
 .news_body{
     max-width: 1920px;
 }
@@ -527,3 +527,7 @@ div.input_submit input{
     cursor: pointer;
     margin: 10px 20px 0 0;  
 }
+/* -------------全部商品------------- */
+/* -------------商品內頁------------- */
+/*-------------登入------------- */
+/*-------------註冊-------------*/
