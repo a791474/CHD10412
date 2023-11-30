@@ -35,6 +35,9 @@ header{
     text-decoration: none;
     font-family: "DFFangSongW6-B5";
 }
+.items a:hover{
+    text-decoration: underline;
+}
 .index-logo{
     width: 200px;
 }
@@ -209,6 +212,9 @@ footer{
     color: #000;
     text-decoration: none;
 }
+.footer_navbar nav ul a:hover{
+    text-decoration: underline;
+}
 .f_middle{
     display: flex;
     align-items: center;
@@ -239,7 +245,7 @@ footer{
     display: block;
 }
 .f_text p{
-    font-size: 18px;
+    font-size: 20px;
     padding-bottom: 12px;
     font-family: 'Noto Sans TC', sans-serif;
 }
@@ -483,6 +489,7 @@ div.contact_body{
     max-width: 1440px;
     height: 100%;
     margin: 100px 240px;
+    font-family: 'oto Sans TC', sans-serif;
 }
 div.contact_body input{
     padding: 5px 15px;
@@ -492,8 +499,7 @@ div.contact_body input{
     border-radius: 5px;
 }
 div.left h2{
-    font-size: 24px;
-    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 26px;
     letter-spacing: 5px;
     padding: 10px;
 }
@@ -503,11 +509,15 @@ div.left h2{
     padding: 10px;
     line-height: 40px;
 }
-.right{
+div.right{
     width: 467px;
     display: block;
     padding: 10px;
     line-height: 30px;
+}
+div.right select{
+    font-size: 20px;
+    font-weight:600;
 }
 div.left input{
     width: 100%;
@@ -518,14 +528,15 @@ div.right div.input_text textarea{
     -webkit-border-radius: 5px;
     border-radius: 5px;
     resize: none;
-    width: 100%;
+    width: 90%;
     background-color: #ddd;
 }
 div.input_submit input{
     width: 90%;
-    height: 30px;
+    height: 36px;
+    font-size: 20px;
+    font-weight: 600;
     cursor: pointer;
-    margin: 10px 20px 0 0;  
 }
 /* -------------全部商品------------- */
 /* -------------商品內頁------------- */
@@ -535,6 +546,7 @@ div.input_submit input{
     flex-direction: column;
     align-items: center;
     padding: 100px 10px 115px 10px;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 .empty_cart_container p {
     font-size: 30px;
@@ -553,6 +565,9 @@ div.input_submit input{
     border: none;
     cursor: pointer;
     margin-bottom: auto;
+}
+.empty_cart_container a:hover{
+    background-color: #5f5f5f;
 }
 /*-------------登入、註冊------------- */
 .login_container, .register_container{
