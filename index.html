@@ -30,18 +30,22 @@
                     </ul>
                 </nav>
                 <a href="login.html">
-                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-user navbar_icons"></i>
                 </a>
                 <a href="empty cart.html">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-cart-shopping navbar_icons"></i>
                 </a>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="搜尋商品..." id="searchbar">
+                <div class="search">
+                    <input type="text" placeholder="搜尋商品..." id="searchbar">
+                    <a href="#">
+                        <i class="fa-solid fa-magnifying-glass navbar_icons"></i>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="index-banner">
-            <div class="title">
-                <p class="CHT">「用瓷器點綴生活，感受藝術之美。」</p>
+        <div class="index-banner_text">
+            <div class="index-title">
+                <h1 class="CHT">「用瓷器點綴生活，感受藝術之美。」</h1>
             </div>
         </div>
     </header>
@@ -52,22 +56,22 @@
     <div class="category">
         <div class="category_pic">
             <a href="product info.html">
-                <img src="imgs/和風系列.png" alt="和風系列">
+                <img src="imgs/category-1.png" alt="和風系列">
             </a>
         </div>
         <div class="category_pic">
             <a href="product info.html">
-                <img src="imgs/洋風系列.png" alt="洋風系列">
+                <img src="imgs/category-2.png" alt="洋風系列">
             </a>
         </div>
         <div class="category_pic">
             <a href="product info.html">
-                <img src="imgs/花瓶系列.png" alt="花瓶系列">
+                <img src="imgs/category-3.png" alt="花瓶系列">
             </a>
         </div>
         <div class="category_pic">
             <a href="product info.html">
-                <img src="imgs/漆器系列.png" alt="漆器系列">
+                <img src="imgs/category-4.png" alt="漆器系列">
             </a>
         </div>
     </div>
@@ -77,45 +81,46 @@
     <div class="products">
         <div class="prod">
             <a href="#">
-                <img src="imgs/相馬燒夫婦茶杯-左上(遮罩).png" alt="">
+                <img src="imgs/index-product-1.png" alt="">
             </a>
         </div>
         <div class="prod">
             <a href="#">
-                <img src="imgs/大倉陶園花瓶-中上(遮罩).png" alt="">
+                <img src="imgs/index-product-2.png" alt="">
             </a>
         </div>
         <div class="prod">
             <a href="#">
-                <img src="imgs/木雕刻壁掛鏡-右上(遮罩).png" alt="">
+                <img src="imgs/index-product-3.png" alt="">
             </a>
         </div>
         <div class="prod">
             <a href="#">
-                <img src="imgs/貓頭鷹瓷擺飾-左下(遮罩).png" alt="">
+                <img src="imgs/index-product-4.png" alt="">
             </a>
         </div>
         <div class="prod">
             <a href="#">
-                <img src="imgs/紅漆器盤-中下(遮罩).png" alt="">
+                <img src="imgs/index-product-5.png" alt="">
             </a>
         </div>
         <div class="prod">
             <a href="#">
-                <img src="imgs/紀念盤-右下(遮罩).png" alt="">
+                <img src="imgs/index-product-6.png" alt="">
             </a>
         </div>
         <a href="#" style="text-decoration: none;">
-            <span class="view_all">view all</span>
+            <button class="view_all" onclick="">查看全部</button>
         </a>
     </div>
 </div>
+
 <div class="news">
     <h2>最新消息</h2>
     <div class="article">
         <div class="card">
             <div class="card_img">
-                <img src="imgs/最新消息 - 二手市場.jpg" alt="文章1">
+                <img src="imgs/news-market.jpg" alt="文章1">
             </div>
             <div class="card_body">
                 <h3 class="card_title">為什麼日本二手市場這麼流行？</h3>
@@ -128,7 +133,7 @@
         </div>
         <div class="card">
             <div class="card_img">
-            <img src="imgs/最新消息 - 店面照片.png" alt="文章2">
+            <img src="imgs/news-shop.png" alt="文章2">
             </div>
             <div class="card_body">
                 <h3 class="card_title">全新開幕！台北中山店</h3>
@@ -141,7 +146,7 @@
         </div>
         <div class="card">
             <div class="card_img">
-                <img src="imgs/最新消息 - 挑選瓷器.jpg" alt="文章3">
+                <img src="imgs/news-porcelain.jpg" alt="文章3">
             </div>
             <div class="card_body">
                 <h3 class="card_title">如何選擇與你心靈共鳴的瓷器</h3>
@@ -152,45 +157,21 @@
                 </div>
             </div>
         </div>
-        <a href="#" class="view_all">
-            <span>view all</span>
+        <a href="#" style="text-decoration:none;">
+            <button class="view_all">閱讀更多</button>
         </a>
     </div>
 </div>
 
 <footer>
-    <div class="f_container">
-        <div class="footer_navbar">
-            <nav>
-                <ul>
-                    <li class="f_item"><a href="about us.html">關於我們</a></li>
-                    <li class="f_item"><a href="news.html">最新消息</a></li>
-                    <li class="f_item"><a href="all_shops.html">全部商品</a></li>
-                    <li class="f_item"><a href="contact us.html">聯絡我們</a></li>
-                </ul>
-            </nav>
-            <!-- <nav>
-                <div class="col-12 col-md-3" id="f_nav">
-                    <ul><li><a href="#">關於我們</a></li></ul>
-                </div>
-                <div class="col-12 col-md-3" id="f_nav">
-                    <ul><li><a href="#">最新消息</a></li></ul>
-                </div>
-                <div class="col-12 col-md-3" id="f_nav">
-                    <ul><li><a href="#">全部商品</a></li></ul>
-                </div>
-                <div class="col-12 col-md-3" id="f_nav">
-                    <ul><li><a href="#">聯絡我們</a></li></ul>
-                </div>
-            </nav> -->
-        </div>
+    <div class="f_container">            
         <div class="f_middle">
-            <div class="store_info">
-                <p>客服時間：11:00-19:00</p>
-                <p>客服專線：02-26278566</p>
-                <p>信箱：takaginet@gmail.com</p>
-            
-            </div>
+            <div class="footer_navbar">
+            <a href="about us.html" class="f_item">關於我們</a>
+            <a href="news.html" class="f_item">最新消息</a>
+            <a href="all_shops.html" class="f_item">全部商品</a>
+            <a href="contact us.html" class="f_item">聯絡我們</a>
+        </div>
             <div class="account_link">
                 <a href="#" style="text-decoration: none;">
                     <i class="fa-brands fa-facebook"></i>
@@ -202,8 +183,10 @@
                     <i class="fa-brands fa-twitter"></i>
                 </a>
             </div>
-            <div class="f_logo">
-                <img src="imgs/index_footer_logo.png" alt="logo">
+            <div class="store_info">
+                <p>客服時間：11:00-19:00</p>
+                <p>客服專線：02-26278566</p>
+                <p>信箱：takaginet@gmail.com</p>
             </div>
             <div class="f_text">
                 <p>註冊以獲取所有最新信息新聞和優惠</p>
@@ -214,11 +197,15 @@
                     </a>
                 </div>
             </div>
+            <div class="f_logo">
+                <img src="imgs/index_footer_logo.png" alt="logo">
+            </div>
         </div>
         <div class="copyright">
             <p>本網站為緯育TibaMe前端工程師班第104期學員專題作品，本平台僅供學習、展示之用。</p>
         </div>
     </div>
 </footer>
+
 </body>
 </html>
