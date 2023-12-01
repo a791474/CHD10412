@@ -122,7 +122,7 @@ div.index-banner_text .index-title{
     transition:all 0.5s ease 0s;
 }
 /* index-new_arrival */
-.products{
+.new-products{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
@@ -131,7 +131,7 @@ div.index-banner_text .index-title{
     margin-inline: 240px;
     position: relative;
 }
-.prod{
+.new-prod{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -139,7 +139,7 @@ div.index-banner_text .index-title{
     width: 314px;
     height: 519px;
 }
-.prod img{
+.new-prod img{
     width: 100%;
     margin: auto;
 }
@@ -521,7 +521,7 @@ div.contact_body{
     max-width: 1440px;
     height: 100%;
     margin: 100px 240px;
-    font-family: 'oto Sans TC', sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 div.contact_body h2{
     font-size: 30px;
@@ -576,6 +576,55 @@ div.input_text textarea{
 }
 /* -------------全部商品------------- */
 /* -------------商品內頁------------- */
+.prodinfo_container{
+    display: flex;
+    flex-direction: row;
+}
+div.prodinfo{
+    display: flex;
+    flex-direction: column;
+}
+div.prod-pic-big{
+    width: 200px;
+    height: 400px;
+}
+div.prod-pic-big img{
+    width: 100%;
+}
+div.prod-under_pic{
+    display: flex;
+}
+div.prod-pic-small{
+    width: 150px;
+    height: 80px;
+}
+div.prod-pic-small img{
+    width: 100%;
+}
+div.infomation{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.infomation h1{
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-family: "DFFangSongW6-B5";
+}
+.infomation p{
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.infomation span{
+    color: #f00;
+    font-size: 30px;
+}
+.infomation button{
+
+}
+.infomation input{
+    
+}
 /* -------------購物車------------- */
 .empty_cart_container{
     display: flex;
