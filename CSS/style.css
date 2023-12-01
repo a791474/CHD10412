@@ -19,9 +19,10 @@ header{
     background-color: rgba(217,217,217,50%);
 }
 .index-navbar{
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     /* padding: 0 50px; */
 }
 .index-navbar nav ul{
@@ -49,6 +50,9 @@ i.navbar_icons{
     padding: 10px;
     color: #000;
 }
+/* div.search{
+    width: 100%;
+} */
 #searchbar{
     height: 20px;
     padding: 10px;
@@ -57,6 +61,14 @@ i.navbar_icons{
     font-family: "DFFangSongW6-B5";
     background-color: rgba(217,217,217,50%);
 }
+/* div.search::after{
+    content:url(../imgs/search.svg);
+    width: 17.5px;
+    height: 21px;
+    position:absolute;
+    right: 6px;
+    top: 31px;
+    transform:translateY(-50%); */
 div.index-banner_text{
     position: relative;
 }
@@ -503,61 +515,64 @@ div.rside_read_more a:hover{
 /*-------------聯絡我們-------------*/
 div.contact_body{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    justify-content:space-evenly;
     max-width: 1440px;
     height: 100%;
     margin: 100px 240px;
     font-family: 'oto Sans TC', sans-serif;
 }
+div.contact_body h2{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+div.contact_body p{
+    font-size: 20px;
+    font-weight: 600;
+}
 div.contact_body input{
+    width: 100%;
+    border: none;
+    font-size: 18px;
     padding: 5px 15px;
-    background-color: #ddd;
-    /* border: none; */
-    border-style: none;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    background-color: transparent;
+    border-bottom: 1px solid #000;
 }
-div.left h2{
-    font-size: 26px;
-    letter-spacing: 5px;
-    padding: 10px;
-}
-.left{
+.contact_input_group{
     width: 467px;
-    display: block;
     padding: 10px;
     line-height: 40px;
 }
-div.right{
-    width: 467px;
-    display: block;
-    padding: 10px;
-    line-height: 30px;
-}
-div.right select{
+
+div.select_Q select{
+    width: 100%;
     font-size: 20px;
     font-weight:600;
 }
-div.left input{
+div.input_text textarea{
     width: 100%;
-    height: 40px;
-}
-div.right div.input_text textarea{
-    border: none;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
     resize: none;
-    width: 90%;
-    background-color: #ddd;
+    font-size: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: transparent;
 }
-div.input_submit input{
-    width: 90%;
+#contact_submit{
+    width: 100%;
     height: 36px;
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #FFF;
+}
+#contact_submit:hover{
+    border: 1px solid #000;
+    background-color: #EEE5DA;
 }
 /* -------------全部商品------------- */
 /* -------------商品內頁------------- */
@@ -615,12 +630,13 @@ fieldset input{
     border-bottom: 1px solid #000;
     width: 100%;
     font-size: 16px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     padding: 5px 25px;
 }
 fieldset button{
     width: 100%;
     height: 48px;
+    margin-block: 5px;
     line-height: 48px;
     color: #fff;
     background-color: #000;
@@ -632,16 +648,37 @@ fieldset button{
 fieldset button:hover{
     background-color: #222;
 }
+.goto_reg{
+    width: 100%;
+    height: 48px;
+    margin-block: 5px;
+    line-height: 48px;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+}
+.goto_reg:hover{
+    background-color: #222;
+}
 .member_link{
     width: 100%;
     display: flex;
     justify-content: space-between;
     font-size: 14px;
     color: #000;
+    padding: 10px 0px;
     margin-bottom: 40px;
+}
+.member_link p{
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
 }
 .member_link a{
     color: #000;
+    font-size: 16px;
     text-decoration: none;
 }
 .member_link a:hover{
@@ -662,4 +699,8 @@ fieldset button:hover{
     display: flex;
     justify-content: center;
     gap: 48px;
+}
+.login_group a:hover{
+    transform: scale(1.1);
+    transition:all 0.5s ease 0s;
 }
