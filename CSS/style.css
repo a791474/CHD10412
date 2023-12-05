@@ -3,6 +3,7 @@
 .index-container{
     height: 100%;
     display: flex;
+    position: relative;
 }
 /* index-header */
 header{
@@ -17,6 +18,9 @@ header{
     flex-direction: row;
     justify-content: space-between;
     background-color: rgba(217,217,217,50%);
+    width: 100%;
+    /* z-index: 5;
+    position: fixed; */
 }
 .index-navbar{
     width: 100%;
@@ -99,15 +103,14 @@ div.index-banner_text .index-title{
 .category{
     margin: auto;
     display: grid;
-    overflow: hidden;
     max-width: 1440px;
     align-items: center;
     justify-items: center;
     grid-template-columns: repeat(4,1fr);
 }
 .category_pic{
-    width: 345px;
-    height: 300px;
+    width: 85%;
+    height: 90%;
 }
 .category a img{
     width: 100%;
@@ -140,12 +143,19 @@ div.index-banner_text .index-title{
 .new-prod{
     width: 250px;
     height: 455px;
+
 }
 .new-prod img{
     width: 100%;
     margin: auto;
+    padding-bottom: 30px;
+    transform: scale(1);
+    transition:all 0.3s linear;
 }
-.new-prod span{
+.new-prod img:hover{
+    transform: scale(1.1);
+}
+.new-prod p{
     font-size: 22px;
     text-align: start;
     font-family: "DFFangSongW6-B5";
@@ -156,45 +166,48 @@ div.index-banner_text .index-title{
     letter-spacing: 3px;
     border-radius: 10px;
     position: absolute;
-    bottom:0; right:80px;
+    bottom:0; right:0px;
     cursor: pointer;
     font-family: 'Noto Sans TC', sans-serif;
-    background-color: #fff;
+    transition: 0.5s linear;
+    background-color: transparent;
 }
 .view_all:hover{
-    transform: rotate(1,1);
-    transition: 0.5s;
     background-color: #EEE5DA;
 }
 /* index-news */
 .news{
-    /* border: 1px solid #000; */
+    width: 100%;
     position: relative;
 }
 .news h2{
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-block: 50px;
     font-size: 40px;
     text-align: center;
     font-family: "DFFangSongW6-B5";
 }
 .article{
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-evenly;
-    position: relative;
-    margin: 30px 240px;
+    /* margin: 30px 240px; */
     gap: 20px;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    padding-bottom: 50px;
 }
 .card{
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     font-family: 'Noto Sans TC', sans-serif;
 }
 .card_title{
     font-size: 20px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    padding-block: 10px;
+    border-top: 1px solid #000;
 }
 .card_info{
     font-size: 16px;
@@ -207,11 +220,14 @@ div.index-banner_text .index-title{
 }
 .card a{
     color: #000;
-    text-decoration: none;
+    text-decoration-color: transparent;
+}
+.card a:hover{
+    text-decoration-color: #aaa;
 }
 .card img {
     width: 100%;
-    height: 271px;
+    /* height: 271px; */
     vertical-align: top;
 }
 /* index-footer */
