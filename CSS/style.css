@@ -398,6 +398,7 @@ div.about_address p{
 }
 div.about_map{
     width: 90%;
+
 }
 div.about_map iframe{
     width: 100%;
@@ -566,22 +567,36 @@ div.input_text textarea{
     background-color: #EEE5DA;
 }
 /* -------------全部商品------------- */
+div.all-shops-container{
+    max-width: 1920px;
+}
 .shops_body{
     max-width: 1440px;
     display: flex;
+    margin: auto;
+    justify-content: center;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 .selection{
+    margin-inline: 30px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
 }
 .selection h2{
-    font-size: 30px;
+    font-size: 40px;
+    padding-bottom: 10px;
 }
 .selection a{
     color: #000;
-    font-size: 20px;
+    padding: 5px;
+    font-size: 26px;
     line-height: 30px;
-    text-decoration: none;
+    transition: 0.5s;
+    text-decoration-color: transparent;
+}
+.selection a:hover{
+    text-decoration-color: #aaa;
 }
 .shops{
     width: 80%;
@@ -590,12 +605,41 @@ div.input_text textarea{
     align-items: center;
     justify-content: space-between;
 }
+.shops h3{
+    width: 100%;
+    /* color: 	#BB3D00; */
+    color: #000;
+    padding: 20px 10px;
+    font-size: 40px;
+    text-align: start;
+}
+.shops p.selection-info{
+    padding: 10px;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #000;
+}
 .shops_pic{
-    width: 200px;
+    padding-top: 20px;
+    width: 290px;
 }
 .shops_pic a img{
     width: 100%;
+    height: 100%;
+    transform: scale(1);
+    transition:all 0.3s linear;
     vertical-align: top;
+}
+.shops_pic a img:hover{
+    transform: scale(1.05);
+}
+p.shops-card-text{
+    padding: 10px 0 50px 10px;
+    font-size: 18px;
+    line-height: 20px;
+    border-top: 1px solid #000;
+    font-family: "DFFangSongW6-B5";
 }
 ul.next-btn{
     display: flex;
@@ -605,15 +649,27 @@ ul.next-btn{
 }
 li.shops-page-item{
     margin: 0 5px;
-    border: 1px solid #888;
-    background-color: #fff;
+    padding: 5px;
     width: 30px;
     height: 30px;
     text-align: center;
+    transition: 0.5s;
+    border: 1px solid #888;
+    background-color: #fff;
+}
+li.shops-page-item:hover{
+    background-color: #EEE5DA;
 }
 li.shops-page-item a{
     color: #000;
-    text-decoration: none;
+    transition: 0.1s;
+    background-color: transparent;
+    text-decoration-color: transparent;
+}
+li.shops-page-item a:hover{
+    color: #f00;
+    background-color: #EEE5DA;
+    text-decoration-color: #aaa;
 }
 /* -------------商品內頁------------- */
 .prodinfo_container{
