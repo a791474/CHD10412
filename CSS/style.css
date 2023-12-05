@@ -566,6 +566,55 @@ div.input_text textarea{
     background-color: #EEE5DA;
 }
 /* -------------全部商品------------- */
+.shops_body{
+    max-width: 1440px;
+    display: flex;
+}
+.selection{
+    display: flex;
+    flex-direction: column;
+}
+.selection h2{
+    font-size: 30px;
+}
+.selection a{
+    color: #000;
+    font-size: 20px;
+    line-height: 30px;
+    text-decoration: none;
+}
+.shops{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.shops_pic{
+    width: 200px;
+}
+.shops_pic a img{
+    width: 100%;
+    vertical-align: top;
+}
+ul.next-btn{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 50px 0;
+}
+li.shops-page-item{
+    margin: 0 5px;
+    border: 1px solid #888;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+li.shops-page-item a{
+    color: #000;
+    text-decoration: none;
+}
 /* -------------商品內頁------------- */
 .prodinfo_container{
     margin: auto;
