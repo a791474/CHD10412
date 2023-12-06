@@ -814,15 +814,15 @@ p.prod-info_price{
 /* -------------購物車------------- */
 .empty_cart_container{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     padding: 100px 10px 115px 10px;
     font-family: 'Noto Sans TC', sans-serif;
 }
 .empty_cart_container p {
     font-size: 30px;
-    margin-block: 40px;
     margin-top: auto;
+    margin-block: 40px;
 }
 .empty_cart_container a {
     width: 200px;
@@ -830,12 +830,12 @@ p.prod-info_price{
     font-size: 16px;
     line-height: 48px;
     color: #fff;
-    background-color: #3f3f3f;
-    text-decoration: none;
-    text-align: center;
     border: none;
     cursor: pointer;
+    text-align: center;
     margin-bottom: auto;
+    text-decoration: none;
+    background-color: #3f3f3f;
 }
 .empty_cart_container a:hover{
     background-color: #5f5f5f;
