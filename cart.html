@@ -6,7 +6,7 @@
     <title>購物車 | 高木瓷器</title>
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/grid.css">
+    <!-- <link rel="stylesheet" href="CSS/grid.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
@@ -38,9 +38,12 @@
                 <a href="cart.html">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
-                <input type="text" placeholder="搜尋商品..." 
-                id="searchbar">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass navbar_icons"></i>
+                    <input type="text" placeholder="搜尋商品..." id="searchbar" class="searchbar">
+                    <a href="#">
+                    </a>
+                </div>
             </div>
         </div>
         <div class="banner_text">
@@ -114,15 +117,22 @@
                         <input type="button" value="+" class="btnPlus">
                         <i class="fa-regular fa-trash-can btn-delete"></i>
                     </div>
-                    <div class="col-3">
-                        <div class="calculation">
-                            cart-pay-info
-                        </div>
-                        <div class="topay"></div>
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="col-3">
+        <div class="checkout-info">
+            <span>訂單總額:</span>
+            <span>NT$1,998</span>
+        </div>
+        <div class="checkout-info">
+            <span>運費:</span>
+            <span>NT$150</span>
+        </div>
+            <div class="toPay">
+                <button onclick="checkout()">結帳</button>
+            </div>
     </div>
 </div>
 
