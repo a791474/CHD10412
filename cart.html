@@ -6,11 +6,13 @@
     <title>購物車 | 高木瓷器</title>
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/grid.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <script src="JS/cart.js"></script>
     <script src="https://kit.fontawesome.com/080f2811bc.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -36,8 +38,9 @@
                 <a href="cart.html">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="搜尋商品..." id="searchbar">
+                <input type="text" placeholder="搜尋商品..." 
+                id="searchbar">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
         </div>
         <div class="banner_text">
@@ -46,6 +49,82 @@
             </div>
         </div>
     </div>
+
+<div class="cart_container">
+    <div class="col-9">
+        <div class="cart-prod">
+            <div class="cart-item">
+                <div class="item-pic">
+                    <a href="product info.html">
+                        <img src="imgs/all shops - prod1.png" alt="購物車商品照">
+                    </a>
+                </div>
+                <div class="cart-detail">
+                    <div class="detail-text">
+                        <a href="product info.html">
+                            <h2>Noritake 三入盤組</h2>
+                            <span>NT$999</span>
+                        </a>
+                    </div>
+                    <div class="cart-btn">
+                        <input type="button" value="-" class="btnMinus">
+                        <input type="text" value="0" class="qty">
+                        <input type="button" value="+" class="btnPlus">
+                        <i class="fa-regular fa-trash-can btn-delete"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <div class="item-pic">
+                    <a href="product info.html">
+                        <img src="imgs/all shops - prod4.png" alt="購物車商品照">
+                    </a>
+                </div>
+                <div class="cart-detail">
+                    <div class="detail-text">
+                        <a href="product info.html">
+                            <h2>Nittoroyal 大盤</h2>
+                            <span>NT$699</span>
+                        </a>
+                    </div>
+                    <div class="cart-btn">
+                        <input type="button" value="-" class="btnMinus">
+                        <input type="text" value="0" class="qty">
+                        <input type="button" value="+" class="btnPlus">
+                        <i class="fa-regular fa-trash-can btn-delete"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <div class="item-pic">
+                    <a href="product info.html">
+                        <img src="imgs/all shops - prod10.png" alt="購物車商品照">
+                    </a>
+                </div>
+                <div class="cart-detail">
+                    <div class="detail-text">
+                        <a href="product info.html">
+                            <h2>百華漆器碗</h2>
+                            <span>NT$300</span>
+                        </a>
+                    </div>
+                    <div class="cart-btn">
+                        <input type="button" value="-" class="btnMinus">
+                        <input type="text" value="0" class="qty">
+                        <input type="button" value="+" class="btnPlus">
+                        <i class="fa-regular fa-trash-can btn-delete"></i>
+                    </div>
+                    <div class="col-3">
+                        <div class="calculation">
+                            cart-pay-info
+                        </div>
+                        <div class="topay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <div class="empty_cart_container">
         <p>購物車內無任何商品</p>
