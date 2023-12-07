@@ -812,16 +812,95 @@ p.prod-info_price{
     font-family: "DFFangSongW6-B5";
 }
 /* -------------購物車------------- */
-.empty_cart_container{
+.cart_container{
+    width: 100%;
+    max-width: 1440px;
+}
+.col-9{
+    /* display: flex; */
+}
+.cart-prod{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.cart-item{
+    gap: 30px;
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+}
+.item-pic{
+    border: 1px solid #000;
+    margin: 10px;
+    width: 35%;
+}
+.item-pic a img{
+    width: 100%;
+}
+.cart-detail{
+    /* background-color: #fa0; */
+}
+.detail-text a{
+    color: #000;
+    text-decoration: none;
+}
+.detail-text h2{
+    padding: 0 10px;
+    font-size: 36px;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+.detail-text span{
+    color: #f00;
+    display: block;
+    font-size: 32px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+}
+.cart-btn{
+    width: 100%;
+    height: 100%;
+    gap: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.cart-btn input{
+    width: 30%;
+    font-size: 24px;
+    text-align: center;
+    border: transparent;
+    border-radius: 8px;
+    padding-block: 10px;
+    background-color: #ddd;
+}
+.cart-btn i{
+    font-size: 30px;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: 0.3s linear;
+    transform: scale(1);
+}
+.cart-btn i:hover{
+    transform: scale(1.3);
+}
+
+.empty_cart_container{
+    width: 100%;
+    margin: auto;
+    /* display: flex; */
+    display: none;
+    padding: 115px 10px;
+    align-items: center;
     flex-direction: column;
-    padding: 100px 10px 115px 10px;
     font-family: 'Noto Sans TC', sans-serif;
 }
 .empty_cart_container p {
     font-size: 30px;
-    margin-top: auto;
     margin-block: 40px;
 }
 .empty_cart_container a {
