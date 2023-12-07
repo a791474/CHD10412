@@ -19,7 +19,6 @@ header{
 
 .index-top-header{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     background-color: rgba(217,217,217,50%);
     width: 100%;
@@ -32,7 +31,6 @@ header{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    /* padding: 0 50px; */
 }
 
 .index-navbar nav ul{
@@ -44,12 +42,13 @@ header{
     padding: 16px;
     color: rgba(0,0,0,0.8);
     font-size: 18px;
-    text-decoration: none;
     font-family: "DFFangSongW6-B5";
+    transition: 0.3s linear;
+    text-decoration-color: transparent;
 }
 
 .items a:hover{
-    text-decoration: underline;
+    text-decoration-color: #222;
 }
 
 .index-logo{
@@ -391,29 +390,20 @@ div.banner{
 
 .top-header{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     background-color: rgba(217,217,217,50%);
 }
 
 .navbar{
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    /* padding: 0 50px; */
+    justify-content: flex-end;
 }
 
 .navbar nav ul{
     display: flex;
     list-style: none;
-}
-
-.items a{
-    padding: 16px;
-    color: rgba(0,0,0,0.8);
-    font-size: 18px;
-    text-decoration: none;
-    font-family: "DFFangSongW6-B5";
 }
 
 .logo{
@@ -429,13 +419,6 @@ i{
     padding: 10px;
     color: #000;
 }
-
-/* i.navbar_icons{
-    top: -7px;
-    right: 180px;
-    font-size: 20px;
-    position: absolute;
-} */
 
 .title h1{
     display: block;
@@ -494,7 +477,6 @@ div.about_address p{
 
 div.about_map{
     width: 90%;
-
 }
 
 div.about_map iframe{
@@ -790,13 +772,17 @@ ul.next-btn{
     margin: 50px 0;
 }
 
+ul.next-btn a{
+    text-decoration: none;
+}
+
 li.shops-page-item{
-    margin: 0 5px;
-    padding: 5px;
     width: 30px;
     height: 30px;
-    text-align: center;
+    margin: 0 5px;
+    padding: 5px;
     transition: 0.5s;
+    text-align: center;
     border: 1px solid #888;
     background-color: #fff;
 }
@@ -823,6 +809,7 @@ li.shops-page-item a:hover{
 .prodinfo_container{
     margin: auto;
     display: flex;
+    max-width: 1440px;
     align-items: center;
     justify-content: center;
 }
@@ -842,7 +829,7 @@ div.prod-top_pic{
 
 div.prod-pic-big{
     border: 1px solid #000;
-    width: 200px;
+    width: 250px;
     margin: 5px;
 }
 
@@ -860,7 +847,7 @@ div.prod-under_pic{
 
 div.prod-pic-small{
     border: 1px solid #000;
-    width: 150px;
+    width: 170px;
     margin: 5px;
 }
 
@@ -869,7 +856,7 @@ div.prod-pic-small img{
     cursor: pointer;
 }
 
-div.infomation{
+div.information{
     gap: 10px;
     width: 50%;
     margin: auto;
@@ -879,57 +866,70 @@ div.infomation{
     font-family: 'Noto Sans TC', sans-serif;
 }
 
-.infomation h1{
+.information h1{
     padding: 0;
     font-size: 40px;
     letter-spacing: 2px;
     font-family: "DFFangSongW6-B5";
 }
 
-.infomation p{
+.information p{
     font-size: 18px;
     line-height: 20px;
     letter-spacing: 2px;
     width: 60%;
 }
 
-.infomation span{
+.information span{
     color: #f00;
+    width: 60%;
     font-size: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
 }
 
 .join{
+    gap: 10px;
+    width: 100%;
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 
-.infomation button.quantity{
-    width: 5%;
+div.join input{
+    width: 10%;
     font-size: 20px;
-    cursor:pointer;
-    border-style: none;
-    background-color: #ddd;
-}
-
-.infomation button.quantity:hover{
-    background-color: #EEE3DA;
-}
-
-.infomation input{
-    width: 20%;
-    font-size: 20px;
+    cursor:pointer ;
     text-align: center;
+    border: transparent;
+    border-radius: 8px;
+    padding-block: 10px;
 }
 
-.infomation button.join-cart{
-    width: 40%; 
-    font-size: 30px;
-    cursor: pointer;
+div.join input.qty{
+    width: 10%;
+    font-size: 24px;
+    text-align: center;
+    cursor: default ;
+    border: transparent;
+    border-radius: 8px;
+    padding-block: 10px;
     background-color: transparent;
 }
 
-.infomation button.join-cart:hover{
+div.information button.join-cart{
+    width: 33%;
+    padding: 10px 0;
+    font-size: 26px;
+    font-weight: 600;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: 0.3s linear;
+    background-color: #ddd;
+}
+
+div.information button.join-cart:hover{
     background-color: #EEE5DA;
 }
 
@@ -939,6 +939,7 @@ div.infomation{
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    max-width: 1440px;
     align-items: center;
     justify-content: center;
 }
@@ -952,7 +953,7 @@ div.infomation{
 }
 
 div.pic{
-    width: 300px;
+    width: 250px;
 }
 
 div.other-shop .pic a img{
@@ -1024,7 +1025,7 @@ p.prod-info_price{
     padding: 5px 10px;
 }
 
-.cart-btn{
+div.cart-btn{
     width: 100%;
     gap: 10px;
     display: flex;
@@ -1032,7 +1033,7 @@ p.prod-info_price{
     font-family: 'Noto Sans TC', sans-serif;
 }
 
-.cart-btn input{
+div.cart-btn input{
     width: 30%;
     font-size: 24px;
     cursor:pointer ;
@@ -1041,18 +1042,17 @@ p.prod-info_price{
     border-radius: 8px;
     padding-block: 10px;    
 }
-input.btnMinus, input.btnPlus{
+div input.btnMinus, input.btnPlus{
     background-color: #ddd;
     transition: all 0.3s linear;
 }
-input.btnMinus:hover, input.btnPlus:hover{
+div input.btnMinus:hover, input.btnPlus:hover{
     background-color: #EEE5DA;
 }
 
-.cart-btn input.qty{
+div.cart-btn input.qty{
     width: 30%;
     font-size: 24px;
-    cursor:pointer ;
     text-align: center;
     border: transparent;
     border-radius: 8px;
@@ -1060,7 +1060,7 @@ input.btnMinus:hover, input.btnPlus:hover{
     background-color: transparent;
 }
 
-.cart-btn i{
+div.cart-btn i{
     font-size: 30px;
     padding: 0 10px;
     cursor: pointer;
@@ -1068,7 +1068,7 @@ input.btnMinus:hover, input.btnPlus:hover{
     transform: scale(1);
 }
 
-.cart-btn i:hover{
+div.cart-btn i:hover{
     transform: scale(1.3);
 }
 

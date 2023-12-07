@@ -1,0 +1,27 @@
+/* ↓創造一個選取器↓ 意思為只要遇到叫做col-的class都做box-sizing、padding的屬性*/
+[class*="col-"]{ box-sizing: border-box; padding: 0 10px;}
+/* 給最外面父層的值 */
+.col-1{width: 8.333333%;}
+.col-2{width: 16.666666%;}
+.col-3{width: 25%;}
+.col-4{width: 33.333333%;}
+.col-5{width: 41.666666%;}
+.col-6{width: 50%;}
+.col-7{width: 58.333333%;}
+.col-8{width: 66.666666%;}
+.col-9{width: 75%;}
+.col-10{width: 83.333333%;}
+.col-11{width: 91.666666%;}
+.col-12{width: 100%;}
+
+/* ↓768px~1024之間觸發↓ */
+@media (min-width:768px){}
+
+/* ↓1024px~1200px之間觸發↓ */
+/* @media (min-width:1024px){} */
+
+/* ↓1200px~1440px之間觸發↓ */
+/* @media (min-width:1200px){} */
+
+/* ↓1440px以上觸發↓ */
+/* @media (min-width:1440px){} */
