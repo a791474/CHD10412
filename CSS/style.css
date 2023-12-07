@@ -1039,8 +1039,14 @@ p.prod-info_price{
     text-align: center;
     border: transparent;
     border-radius: 8px;
-    padding-block: 10px;
-    background-color: #eee;
+    padding-block: 10px;    
+}
+input.btnMinus, input.btnPlus{
+    background-color: #ddd;
+    transition: all 0.3s linear;
+}
+input.btnMinus:hover, input.btnPlus:hover{
+    background-color: #EEE5DA;
 }
 
 .cart-btn input.qty{
@@ -1067,15 +1073,16 @@ p.prod-info_price{
 }
 
 .col-3{
-    /* top: auto;
-    right: 320px;
-    position: fixed; */
     margin: 0 auto;
     display: flex;
     justify-content: end;
     flex-direction: column;
 }
-
+.col-3 h3{
+    padding: 10px;
+    font-size: 28px;
+    border-top: 1px solid #000;
+}
 .checkout-info{
     width: 100%;
     padding: 10px;
@@ -1085,17 +1092,49 @@ p.prod-info_price{
     letter-spacing: 2px;
     justify-content: space-between;
 }
+
+.toPay-icons{
+    gap: 8px;
+    width: 100%;
+    padding-top: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.toPay-icons img{
+    width: 100%;
+}
+
 .toPay{
     width: 100%;
     padding: 10px 0;
+    position: relative;
 }
+
+.toPay img{
+    width: 15%;
+    top: 17px; right: 50px;
+    position: absolute;
+}
+
 .toPay button{
     width: 100%;
     padding: 10px;
+    font-size: 26px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s linear;
     border-style: none;
     border-radius: 8px;
+    margin-bottom: 10px;
     background-color: #ddd;
 }
+
+.toPay button:hover{
+    background-color: #EEE5DA;
+}
+
 .empty_cart_container{
     width: 100%;
     margin: auto;
