@@ -10,11 +10,11 @@
 /* index-header */
 
 header{
-    background-image: url(../imgs/index_header_bg.png);
-    background-repeat: no-repeat;
-    background-size:contain;
     width: 100%;
     height: 43.8vw;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-image: url(../imgs/index_header_bg.png);
 }
 
 .index-top-header{
@@ -48,7 +48,7 @@ header{
 }
 
 .items a:hover{
-    text-decoration-color: #222;
+    text-decoration-color: #000;
 }
 
 .index-logo{
@@ -79,22 +79,18 @@ i.navbar_icons{
     background-color: rgba(217,217,217,50%);
 }
 
-div.index-banner_text{
-    position: relative;
-}
-
-div.index-banner_text .index-title{
+.index-title{
     display: block;
     position: absolute;
-    top: 330px;
-    left: 530px;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
 }
 
 .index-title h1.CHT{
-    display: block;
     width: 100%;
-    text-align: center;
     font-size: 40px;
+    text-align: center;
     font-family: "DFFangSongW6-B5";
 }
 
@@ -268,9 +264,10 @@ div.index-banner_text .index-title{
 /* index-footer */
 
 footer{
-    position: relative;
     width: 100%;
+    position: relative;
     background-color: #EEE5DA;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .f_container{
@@ -306,39 +303,37 @@ footer{
 }
 
 .footer_navbar a{
-    font-size: 20px;
-    font-family: 'Noto Sans TC', sans-serif;
     color: #000;
-    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s linear;
+    text-decoration-color: transparent;
 }
 
 .footer_navbar a:hover{
-    text-decoration: underline;
+    text-decoration-color: #000;
 }
 
 .store_info{
     font-size: 20px;
-    font-family: 'Noto Sans TC', sans-serif;
     line-height: 30px;
 }
 
 .account_link{
-    position: absolute;
-    display: flex;
     right: 365px;
     bottom: -35px;
+    display: flex;
+    position: absolute;
 }
 
 .account_link i{
-    font-size: 30px;
     padding: 10px;
+    font-size: 30px;
     color: #669999;
 }
 
 .f_text p{
     font-size: 20px;
     padding-bottom: 10px;
-    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .input_group{
@@ -362,14 +357,13 @@ footer{
 }
 
 .copyright{
-    display: block;
     height: 100%;
+    display: block;
     padding-top: 20px;
 }
 
 .copyright p{
     padding: 10px;
-    font-family: 'Noto Sans TC', sans-serif;
     text-align: center;
     letter-spacing: 1px;
 }
@@ -381,11 +375,12 @@ footer{
 }
 
 div.banner{
-    background-image: url(../imgs/about\,news\,shop_bg.png);
-    background-repeat: no-repeat;
-    background-size:cover;
     width: 100%;
     height: 300px;
+    position: relative;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-image: url(../imgs/about\,news\,shop_bg.png);
 }
 
 .top-header{
@@ -420,11 +415,17 @@ i{
     color: #000;
 }
 
+.title{
+    top: 50%;
+    right: 50%;
+    position: absolute;
+    transform: translate(-330%);
+}
+
 .title h1{
+    width: 100%;
     display: block;
     font-size: 40px;
-    margin-top: 100px;
-    margin-left: 260px;
     font-family: "DFFangSongW6-B5";
 }
 
@@ -1171,12 +1172,14 @@ div.cart-btn i:hover{
 
 /*-------------登入、註冊------------- */
 
+div.hb{
+    display: none;
+}
 .login_container, .register_container{
-    width: 500px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    /* max-width: 1440px; */
-    margin-inline: auto;
+    width: 34.7222%;
+    max-width: 1440px;
+    margin: auto;
+    padding: 50px 0;
     font-family: 'Noto Sans TC', sans-serif;
 }
 
@@ -1188,31 +1191,31 @@ fieldset{
 
 fieldset legend{
     font-size: 26px;
-    margin-bottom: 50px;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 fieldset input{
-    background-color: transparent;
     border: none;
-    border-bottom: 1px solid #000;
     width: 100%;
     font-size: 16px;
-    margin-bottom: 30px;
     padding: 5px 25px;
+    margin-bottom: 30px;
+    background-color: transparent;
+    border-bottom: 1px solid #000;
 }
 
 fieldset button{
     width: 100%;
     height: 48px;
+    font-size: 18px;
     margin-block: 5px;
     line-height: 48px;
     color: #fff;
-    background-color: #000;
-    text-align: center;
-    font-size: 18px;
     border: none;
     cursor: pointer;
+    text-align: center;
+    background-color: #000;
 }
 
 fieldset button:hover{
