@@ -215,7 +215,6 @@
     }
     div.about_pic{
         width: 95%;
-        /* border: 1px solid #000; */
         box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.2);
         order: 2;
     }
@@ -233,6 +232,15 @@
         width: 95%;
         box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.2);
     }
+/*-------------mb-最新消息-------------*/
+
+/*-------------mb-聯絡我們-------------*/
+div.contact_body{
+    width: 100%;
+}
+.contact_input_group{
+    width: 80%;
+}
 /*-------------mb-登入、註冊------------- */
     div.login_container, div.register_container{
         width: 80%;

@@ -506,6 +506,7 @@ div.about_map iframe{
 }
 
 .news_container{
+    margin: auto;
     padding: 20px;
     max-width: 1440px;
 }
@@ -513,14 +514,14 @@ div.about_map iframe{
 .top{
     width: 100%;
     display: flex;
-    margin-left: 240px;
     align-items: center;
 }
 
 .news_pic{
-    width: 830px;
-    height: 540px;
-    /* margin-right: 225px; */
+    /* width: 830px; */
+    width: 57.64%;
+    /* height: 540px; */
+    height: 100%;
     border: 1px solid #000;
 }
 
@@ -534,7 +535,6 @@ div.rside{
     width: 570px;
     display: flex;
     flex-direction: column;
-    /* margin-right:240px; */
     font-family: 'Noto Sans TC', sans-serif;
 }
 
@@ -582,8 +582,8 @@ div.rside_read_more a:hover{
 .under{
     border: 1px solid #000;
     width: 100%;
+    margin: auto;
     padding: 10px;
-    margin-left: 240px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -624,20 +624,20 @@ div.rside_read_more a:hover{
 /*-------------聯絡我們-------------*/
 
 div.contact_body{
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    max-width: 1440px;
-    height: 100%;
-    margin: 100px 240px;
+    flex-direction: column;
     font-family: 'Noto Sans TC', sans-serif;
 }
 
 div.contact_body h2{
     font-size: 30px;
-    text-align: center;
     font-weight: 600;
+    text-align: center;
 }
 
 div.contact_body p{
@@ -655,7 +655,7 @@ div.contact_body input{
 }
 
 .contact_input_group{
-    width: 467px;
+    width: 50%;
     padding: 10px;
     line-height: 40px;
 }
