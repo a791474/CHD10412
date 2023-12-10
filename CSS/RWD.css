@@ -15,8 +15,108 @@
 .col-12{width: 100%;}
 
 /* ↓768px~1024之間觸發↓ */
-@media (min-width:768px){}
-
+@media (width <= 768px){
+/*-------------mb-header-------------*/
+    div.top-header{
+        width: 100%;
+        display: flex;
+    }
+    div.navbar{
+        display: none;
+    }
+    div.hb{
+        display: flex;
+        margin-block:9px 0;
+        padding: 8px;
+        gap: 3px;
+        width: 12%;
+        align-items: center;
+        flex-direction: column;
+    }
+    div.hb p{
+        width: 100%;
+        margin: 1px 0;
+        padding: 3px 0;
+        border-radius: 5px;
+        background-color: #699;
+    }
+    div.banner{
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+    }
+    div.index-banner_text.index-title{
+        /* display: none; */
+        top: 0;
+        left: 0;
+    }
+/*-------------mb-footer-------------*/
+    footer{
+        width: 100%;
+    }
+    .f_container{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .f_middle{
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: normal; */
+    }
+    .footer_navbar{
+        width: 100%;
+        margin: auto;
+        padding-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        column-gap: 10px;
+    }
+    .footer_navbar a{
+        font-size: 14px;
+    }
+    .store_info{
+        width: 100%;
+        margin: auto;
+        padding: 0 10px;
+        font-size: 14px;
+        /* border-bottom: 1px solid #000; */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .account_link{
+        right: 105px;
+        bottom: -38px;
+    }
+    .account_link i{
+        font-size: 26px;
+    }
+    .f_text{
+        display: none;
+    }
+    .f_logo{
+        width: 40%;
+        height: 5%;
+    }
+    .copyright{
+        font-size: 12px;
+    }
+    .copyright p{
+        margin-top: 5px;
+        border-top: 1px solid #000;
+    }
+/*-------------登入、註冊------------- */
+    div.login_container, div.register_container{
+        width: 80%;
+    }
+}
 /* ↓1024px~1200px之間觸發↓ */
 /* @media (min-width:1024px){} */
 
