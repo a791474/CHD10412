@@ -1,7 +1,7 @@
 /* ↓創造一個選取器↓ 意思為只要遇到叫做col-的class都做box-sizing、padding的屬性*/
-[class*="col-"]{ box-sizing: border-box; padding: 0 10px;}
+/* [class*="col-"]{ box-sizing: border-box; padding: 0 10px;} */
 /* 給最外面父層的值 */
-.col-1{width: 8.333333%;}
+/* .col-1{width: 8.333333%;}
 .col-2{width: 16.666666%;}
 .col-3{width: 25%;}
 .col-4{width: 33.333333%;}
@@ -12,7 +12,7 @@
 .col-9{width: 75%;}
 .col-10{width: 83.333333%;}
 .col-11{width: 91.666666%;}
-.col-12{width: 100%;}
+.col-12{width: 100%;} */
 
 /* ↓768px~1024之間觸發↓ */
 @media (width <= 768px){
@@ -21,9 +21,18 @@
         display: none;
     }
     .index-title{
+        width: 70%;
+        
+        transform: translate(-67%,-20%)
+    }
+    .index-title h1.PC{
         display: none;
-        top: 0;
-        left: 0;
+    }
+    .index-title h1.mb{
+        color: #666;
+        display: block;
+        font-size: 30px;
+        line-height: 40px;
     }
 /*-------------mb-index-shop-section-------------*/
     .shop_section h2{
@@ -182,7 +191,49 @@
         margin-top: 5px;
         border-top: 1px solid #000;
     }
-/*-------------登入、註冊------------- */
+
+/*-------------mb-關於我們-------------*/
+    div.about_body{
+        display: flex;
+        flex-direction: column;
+    }
+    div.about_text{
+        order: 1;
+    }
+    div.about_text h3{
+        width: 100%;
+        padding: 30px 0;
+        font-size: 28px;
+        font-weight: 600;
+        text-align: center;
+    }
+    div.about_text p{
+        width: 100%;
+        padding-inline: 15px;
+        font-size: 16px;
+        text-align: start;
+    }
+    div.about_pic{
+        width: 95%;
+        /* border: 1px solid #000; */
+        box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.2);
+        order: 2;
+    }
+    div.about_address{
+        order: 3;
+    }
+    div.about_address p{
+        font-size: 14px;
+        padding-left: 10px;
+        line-height: 30px;
+        letter-spacing: 0;
+    }
+    div.about_map{
+        order: 4;
+        width: 95%;
+        box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.2);
+    }
+/*-------------mb-登入、註冊------------- */
     div.login_container, div.register_container{
         width: 80%;
     }

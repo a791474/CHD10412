@@ -87,11 +87,16 @@ i.navbar_icons{
     left: 50%;
 }
 
-.index-title h1.CHT{
+.index-title h1.PC{
     width: 100%;
+    color: #666;
     font-size: 40px;
     text-align: center;
     font-family: "DFFangSongW6-B5";
+}
+
+.index-title h1.mb{
+    display: none;
 }
 
 /* index-shop-section */
@@ -441,30 +446,32 @@ i{
 
 div.about_body{
     width: 100%;
+    max-width: 1440px;
     margin: auto;
     padding: 20px 0px;
+    gap: 10px;
     display: grid;
     align-items: center;
     justify-items: center;
     grid-template-columns: repeat(2, 1fr);
     font-family: 'Noto Sans TC', sans-serif;
-    gap: 10px;
 }
 
 div.about_pic{
-    width: 90%;
+    width: 100%;
 }
 
 div.about_pic img{
     width: 100%;
+    vertical-align: top;
 }
 
 div.about_text{
-    width: 90%;
+    width: 100%;
 }
 
 div.about_text h3{
-    width: 90%;
+    width: 100%;
     padding: 30px 10px;
     font-size: 30px;
 }
@@ -485,7 +492,7 @@ div.about_address p{
 }
 
 div.about_map{
-    width: 90%;
+    width: 100%;
 }
 
 div.about_map iframe{
