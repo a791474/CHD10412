@@ -501,10 +501,6 @@ div.about_map iframe{
 
 /*-------------最新消息-------------*/
 
-.news_body{
-    max-width: 1920px;
-}
-
 .news_container{
     margin: auto;
     padding: 20px;
@@ -519,7 +515,7 @@ div.about_map iframe{
 
 .news_pic{
     /* width: 830px; */
-    width: 57.64%;
+    width: 50%;
     /* height: 540px; */
     height: 100%;
     border: 1px solid #000;
@@ -532,7 +528,8 @@ div.about_map iframe{
 }
 
 div.rside{ 
-    width: 570px;
+    width: 50%;
+    margin:auto 0;
     display: flex;
     flex-direction: column;
     font-family: 'Noto Sans TC', sans-serif;
