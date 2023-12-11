@@ -1,7 +1,7 @@
 /* ↓創造一個選取器↓ 意思為只要遇到叫做col-的class都做box-sizing、padding的屬性*/
-/* [class*="col-"]{ box-sizing: border-box; padding: 0 10px;} */
+[class*="col-"]{ box-sizing: border-box; padding: 0 10px;}
 /* 給最外面父層的值 */
-/* .col-1{width: 8.333333%;}
+.col-1{width: 8.333333%;}
 .col-2{width: 16.666666%;}
 .col-3{width: 25%;}
 .col-4{width: 33.333333%;}
@@ -12,7 +12,7 @@
 .col-9{width: 75%;}
 .col-10{width: 83.333333%;}
 .col-11{width: 91.666666%;}
-.col-12{width: 100%;} */
+.col-12{width: 100%;}
 
 /* ↓768px~1024之間觸發↓ */
 @media (width <= 768px){
@@ -22,7 +22,6 @@
     }
     .index-title{
         width: 70%;
-        
         transform: translate(-67%,-20%)
     }
     .index-title h1.PC{
@@ -34,6 +33,7 @@
         font-size: 30px;
         line-height: 40px;
     }
+    
 /*-------------mb-index-shop-section-------------*/
     .shop_section h2{
         font-size: 22px;
@@ -234,16 +234,22 @@
     }
 /*-------------mb-最新消息-------------*/
     .news_container{
-        /* max-width: 768px; */
+        max-width: 768px;
     }
     
 /*-------------mb-聯絡我們-------------*/
-div.contact_body{
-    width: 100%;
-}
-.contact_input_group{
-    width: 80%;
-}
+    div.contact_body{
+        width: 100%;
+    }
+    .contact_input_group{
+        width: 80%;
+    }
+/*-------------mb-全部商品--------------- */
+
+/*-------------mb-商品內頁--------------- */
+
+/*-------------mb-購物車--------------- */
+    
 /*-------------mb-登入、註冊------------- */
     div.login_container, div.register_container{
         width: 80%;
