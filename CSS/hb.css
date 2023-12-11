@@ -1,0 +1,79 @@
+:root {
+    --collapse_time: 0.5s;
+}
+.show {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+
+.backdrop{
+    flex: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+.menu {
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    overflow-x: hidden; /* 隱藏邊條的內容 */
+}
+.switch_in {
+    width: 0;
+    transition: width var(--collapse_time);
+}
+.switch_out {
+    width: 70%;
+    transition: width var(--collapse_time);
+}
+
+.menu_btn {
+    width: 45px;
+    height: 45px;
+    float: right;
+    border: none;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 10px;
+    background-color: #699;
+    color: #fff;
+}
+.menu_btn img {
+    width: 100%;
+    height: 100%;
+}
+.col {
+    display: flex;
+    padding: 5px 20px ;
+    align-items: center;
+    white-space:nowrap;
+}
+.col span{
+    width: 25px;
+    height: 25px;
+    padding-right: 10px;
+}
+
+.custom_menu_css {
+    display: flex;
+    flex-direction: column;
+}
+.collapse_header {
+    display: flex;
+    width: 100%;
+    background-color: aliceblue;
+    align-items: center;
+}
+.collapse_header .person {
+    max-width: 30px;
+    max-height: 30px;
+    padding: 5px 10px 5px 20px;
+}
