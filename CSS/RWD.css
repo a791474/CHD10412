@@ -17,7 +17,7 @@
 /* ↓768px~1024之間觸發↓ */
 @media (width <= 768px){
 /*-------------mb-index-header-------------*/
-    .index-navbar{
+    .navbar{
         display: none;
     }
     .index-title{
@@ -34,6 +34,21 @@
         line-height: 40px;
     }
     
+    /*-------------mb-header-------------*/
+    .top-header{
+        width: 100%;
+        display: flex;
+    }
+    div.navbar{
+        display: none;
+    }
+    div.banner{
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+    }
+
+
 /*-------------mb-index-shop-section-------------*/
     .shop_section h2{
         font-size: 22px;
@@ -101,35 +116,6 @@
     }
     .card_footer a{
         text-decoration-color: #222;
-    }
-/*-------------mb-header-------------*/
-    div.top-header{
-    width: 100%;
-    display: flex;
-    }
-    div.navbar{
-        display: none;
-    }
-    div.hb{
-        display: flex;
-        margin-block:9px 0;
-        padding: 8px;
-        gap: 3px;
-        width: 12%;
-        align-items: center;
-        flex-direction: column;
-    }
-    div.hb p{
-        width: 100%;
-        margin: 1px 0;
-        padding: 3px 0;
-        border-radius: 5px;
-        background-color: #699;
-    }
-    div.banner{
-        height: 200px;
-        background-size: cover;
-        background-position: center;
     }
 
 /*-------------mb-footer-------------*/

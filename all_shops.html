@@ -7,27 +7,90 @@
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/RWD.css">
-    <!-- <link rel="stylesheet" href="CSS/grid.css"> -->
+    <!-- Google Font 導入仿宋體、Noto Sans TC -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <!-- Google Font icon 漢堡字體轉圖案用 -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <!-- 頁籤小圖icon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-    <script src="https://kit.fontawesome.com/080f2811bc.js" crossorigin="anonymous"></script>
+    <!-- 漢堡的JS -->
+    <script src="JS/hb.js" defer></script>
+    <!-- FontAwesome icon導入 -->
+    <script src="https://kit.fontawesome.com/080f2811bc.js"crossorigin="anonymous"></script>
 </head>
 <body>
-    
+<!-- --------------------------------------------------------------- -->
+<div id="menu_list" class="show"> 
+    <div class="backdrop" onclick="close_menu()"></div>
+    <div class="menu custom_menu_css switch_out" id="menu_content">
+        <div class="collapse_header">
+            <span class="person material-icons">
+                list
+            </span>
+        </div>
+        <div class="collapse_content">
+            <div class="col" onclick="go_to('all_shops')">
+                <span class="material-icons">
+                    search
+                </span>
+                <input type="text" placeholder="搜尋商品..." class="hb-search">
+            </div>
+            <div class="col" onclick="go_to('about us')">
+                <span class="material-icons">
+                    groups
+                </span>
+                關於我們
+            </div>
+            <div class="col" onclick="go_to('news')">
+                <span class="material-icons">
+                    grade
+                </span>
+                最新消息
+            </div>
+            <div class="col" onclick="go_to('all_shops')">
+                <span class="material-icons">
+                    inventory_2
+                </span>
+                全部商品
+            </div>
+            <div class="col" onclick="go_to('contact us')">
+                <span class="material-icons">
+                    support_agent
+                </span>
+                聯絡我們
+            </div>
+            <div class="col" onclick="go_to('login')">
+                <span class="material-icons">
+                    person
+                </span>
+                會員登入
+            </div>
+            <div class="col" onclick="go_to('login')">
+                <span class="material-icons">
+                    shopping_cart
+                </span>
+                購物車
+            </div>
+            <div class="sidebar-pic">
+                <img src="./imgs/shiba_smile.jpg" alt="fun">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- --------------------------------------------------------------- -->
 <div class="container">
     <div class="banner">
-        <div class="top-header">
-            <div class="logo" id="top1">
+        <div class="top-header" id="top1">
+            <div class="h_logo">
                 <a href="index.html"><img src="imgs/index_header_logo.png" alt="logo"></a>
             </div>
-            <div class="hb">
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>
+            <button class="menu_btn" onclick="open_menu()">
+                <span class="material-icons">
+                    menu
+                </span>
+            </button>
             <div class="navbar">
                 <nav>
                     <ul>
@@ -37,15 +100,17 @@
                         <li class="items"><a href="contact us.html">聯絡我們</a></li>
                     </ul>
                 </nav>
-                <a href="login.html">
-                    <i class="fa-solid fa-user"></i>
-                </a>
-                <a href="cart.html">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </a>
+                <div class="social-media">
+                    <a href="login.html">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <a href="cart.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </div>
                 <div class="search">
-                    <i class="fa-solid fa-magnifying-glass navbar_icons"></i>
-                    <input type="text" placeholder="搜尋商品..." id="searchbar" class="searchbar">
+                    <i class="fa-solid fa-magnifying-glass search_icons"></i>
+                    <input type="text" placeholder="搜尋商品..." class="searchbar">
                 </div>
             </div>
         </div>
@@ -53,7 +118,8 @@
             <h1>商品總覽</h1>
         </div>
     </div>
-
+</div>
+<!-- --------------------------------------------------------------- -->
 <div class="all-shops-container">
     <div class="shops_body">
         <div class="prod-sidebar">

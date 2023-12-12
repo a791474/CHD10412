@@ -1,13 +1,12 @@
 *{box-sizing: border-box;}
 /*-------------index首頁-------------*/
 
-.index-container{
+.index-container, .container{
     width: 100%;
-    display: flex;
     position: relative;
 }
 
-/* index-header */
+/*-------------首頁header-------------*/
 
 header{
     width: 100%;
@@ -17,31 +16,72 @@ header{
     background-image: url(../imgs/index_header_bg.png);
 }
 
-.index-top-header{
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(217,217,217,50%);
-    width: 100%;
-    /* z-index: 5;
-    position: fixed; */
+.index-title{
+    display: block;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
 }
 
-.index-logo{
+.index-title h1.PC{
+    width: 100%;
+    color: #666;
+    font-size: 40px;
+    text-align: center;
+    font-family: "DFFangSongW6-B5";
+}
+
+.index-title h1.mb{
+    display: none;
+}
+
+/*-------------內頁header-------------*/
+
+div.banner{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-image: url(../imgs/about\,news\,shop_bg.png);
+}
+
+.top-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(217,217,217,50%);
+}
+
+.title{
+    top: 50%;
+    right: 50%;
+    position: absolute;
+    transform: translate(-330%);
+}
+
+.title h1{
+    width: 100%;
+    font-size: 40px;
+    font-family: "DFFangSongW6-B5";
+}
+
+/*-------------header共用CSS-------------*/
+.h_logo{
     width: 200px;
 }
 
-.index-logo img{
+.h_logo img{
     width: 100%;
 }
 
-.index-navbar{
-    width: 100%;
+.navbar{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
 }
 
-.index-navbar nav ul{
+.navbar nav ul{
     display: flex;
     list-style: none;
 }
@@ -57,6 +97,10 @@ header{
 
 .items a:hover{
     text-decoration-color: #000;
+}
+
+.social-media a{
+    text-decoration: none;
 }
 
 i{
@@ -81,30 +125,226 @@ i.search_icons{
 .searchbar{
     height: 20px;
     padding: 10px 22px;
-    font-size: 16px;
     border-radius: 20px;
+    font-size: 16px;
     font-family: "DFFangSongW6-B5";
     background-color: rgba(217,217,217,50%);
 }
 
-.index-title{
+/*-------------漢堡------------- */
+
+:root {
+    --collapse_time: 0.5s;
+}
+.show {
     display: block;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
 }
-
-.index-title h1.PC{
-    width: 100%;
-    color: #666;
-    font-size: 40px;
-    text-align: center;
-    font-family: "DFFangSongW6-B5";
-}
-
-.index-title h1.mb{
+.hidden {
     display: none;
+}
+
+.backdrop{
+    flex: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+.menu {
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden; /* 隱藏邊條的內容 */
+}
+
+.switch_in { /* 側邊欄收進去的寬度及快慢秒數 */
+    width: 0;
+    transition: width var(--collapse_time);
+}
+.switch_out { /* 側邊欄展開的寬度及快慢秒數 */
+    width: 90%;
+    transition: width var(--collapse_time);
+}
+
+.menu_btn {
+    width: 45px;
+    height: 45px;
+    float: right;
+    border: none;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 10px;
+    background-color: #699;
+    color: #fff;
+}
+.menu_btn img {
+    width: 100%;
+    height: 100%;
+}
+.hb-search{
+    width: 40%;
+    padding:2px 5px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-family: "DFFangSongW6-B5";
+    background-color: rgba(255, 255, 255,0.8);
+}
+.col {
+    display: flex;
+    padding: 5px 20px ;
+    align-items: center;
+    white-space:nowrap;
+}
+.col span{
+    width: 25px;
+    height: 25px;
+    padding-right: 10px;
+}
+
+.sidebar-pic{
+    width: 50%;
+    height: 50%;
+    padding: 10px;
+    animation: fade 1s linear 0s;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.sidebar-pic img{
+    width: 100%;
+    vertical-align: top;
+}
+
+.custom_menu_css {
+    display: flex;
+    flex-direction: column;
+}
+.collapse_header {
+    display: flex;
+    width: 100%;
+    background-color: aliceblue;
+    align-items: center;
+}
+.collapse_header .person {
+    max-width: 30px;
+    max-height: 30px;
+    padding: 5px 10px 5px 20px;
+}
+
+/*--------footer CSS (all the same)--------*/
+
+footer{
+    width: 100%;
+    position: relative;
+    background-color: #EEE5DA;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.f_container{
+    margin: auto;
+    max-width: 1440px;
+    position: relative;
+}
+
+.f_middle{
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer_navbar{
+    display: flex;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    padding-top: 16px;
+    position: relative;
+    flex-direction: column;
+}
+
+.footer_navbar a{
+    color: #000;
+    font-size: 20px;
+    transition: 0.3s linear;
+    text-decoration-color: transparent;
+}
+
+.footer_navbar a:hover{
+    text-decoration-color: #000;
+}
+
+.store_info{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.account_link{
+    right: 105px;
+    bottom: -40px;
+    display: flex;
+    position: absolute;
+}
+
+.account_link i{
+    padding: 10px;
+    font-size: 30px;
+    color: #669999;
+}
+
+.f_text p{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.input_group{
+    position: relative;
+}
+
+.input_group input{
+    width: 97%;
+    height: 30px;
+    padding-inline: 10px;
+    border-radius: 30px;
+    background-color: #eee;
+}
+
+.input_group a i{
+    font-size: 16px;
+    position: absolute;
+    right: 4px;
+    bottom: -3px;
+    color:#000;
+}
+
+.f_logo{
+    width: 15.5555%;
+}
+
+.f_logo img{
+    width: 100%;
+}
+
+.copyright{
+    height: 100%;
+    display: block;
+    padding-top: 26px;
+}
+
+.copyright p{
+    padding: 10px;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
 /* index-shop-section */
@@ -291,165 +531,6 @@ i.search_icons{
     vertical-align: top;
 }
 
-/* all footer */
-
-footer{
-    width: 100%;
-    position: relative;
-    background-color: #EEE5DA;
-    font-family: 'Noto Sans TC', sans-serif;
-}
-
-.f_container{
-    margin: auto;
-    max-width: 1440px;
-    position: relative;
-}
-
-.f_middle{
-    width: 100%;
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.footer_navbar{
-    display: flex;
-    row-gap: 20px;
-    flex-wrap: wrap;
-    padding-top: 16px;
-    position: relative;
-    flex-direction: column;
-}
-
-.footer_navbar a{
-    color: #000;
-    font-size: 20px;
-    transition: 0.3s linear;
-    text-decoration-color: transparent;
-}
-
-.footer_navbar a:hover{
-    text-decoration-color: #000;
-}
-
-.store_info{
-    font-size: 20px;
-    line-height: 30px;
-}
-
-.account_link{
-    right: 105px;
-    bottom: -40px;
-    display: flex;
-    position: absolute;
-}
-
-.account_link i{
-    padding: 10px;
-    font-size: 30px;
-    color: #669999;
-}
-
-.f_text p{
-    font-size: 20px;
-    padding-bottom: 10px;
-}
-
-.input_group{
-    position: relative;
-}
-
-.input_group input{
-    width: 97%;
-    height: 30px;
-    padding-inline: 10px;
-    border-radius: 30px;
-    background-color: #eee;
-}
-
-.input_group a i{
-    font-size: 16px;
-    position: absolute;
-    right: 4px;
-    bottom: -3px;
-    color:#000;
-}
-
-.f_logo{
-    width: 15.5555%;
-}
-
-.f_logo img{
-    width: 100%;
-}
-
-.copyright{
-    height: 100%;
-    display: block;
-    padding-top: 26px;
-}
-
-.copyright p{
-    padding: 10px;
-    text-align: center;
-    letter-spacing: 1px;
-}
-
-/*-------------內頁header-------------*/
-
-.container{
-    height: 100%;
-}
-
-div.banner{
-    width: 100%;
-    height: 300px;
-    position: relative;
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-image: url(../imgs/about\,news\,shop_bg.png);
-}
-
-.top-header{
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(217,217,217,50%);
-}
-
-.navbar{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.navbar nav ul{
-    display: flex;
-    list-style: none;
-}
-
-.logo{
-    width: 200px;
-}
-
-.logo img{
-    width: 100%;
-}
-
-.title{
-    top: 50%;
-    right: 50%;
-    position: absolute;
-    transform: translate(-330%);
-}
-
-.title h1{
-    width: 100%;
-    font-size: 40px;
-    font-family: "DFFangSongW6-B5";
-}
 
 /*-------------關於我們 body-------------*/
 
@@ -1321,84 +1402,4 @@ fieldset button:hover{
 .login_group a:hover{
     transform: scale(1.1);
     transition:all 0.5s ease 0s;
-}
-/*-------------漢堡------------- */
-:root {
-    --collapse_time: 0.5s;
-}
-.show {
-    display: block;
-}
-.hidden {
-    display: none;
-}
-
-.backdrop{
-    flex: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-}
-.menu {
-    height: 100%;
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    background-color: #FFF;
-    overflow-x: hidden; /* 隱藏邊條的內容 */
-}
-.switch_in {
-    width: 0;
-    transition: width var(--collapse_time);
-}
-.switch_out {
-    width: 70%;
-    transition: width var(--collapse_time);
-}
-
-.menu_btn {
-    width: 45px;
-    height: 45px;
-    float: right;
-    border: none;
-    border-radius: 10px;
-    margin: 15px;
-    padding: 10px;
-    background-color: #699;
-    color: #fff;
-}
-.menu_btn img {
-    width: 100%;
-    height: 100%;
-}
-.col {
-    display: flex;
-    padding: 5px 20px ;
-    align-items: center;
-    white-space:nowrap;
-}
-.col span{
-    width: 25px;
-    height: 25px;
-    padding-right: 10px;
-}
-
-.custom_menu_css {
-    display: flex;
-    flex-direction: column;
-}
-.collapse_header {
-    display: flex;
-    width: 100%;
-    background-color: aliceblue;
-    align-items: center;
-}
-.collapse_header .person {
-    max-width: 30px;
-    max-height: 30px;
-    padding: 5px 10px 5px 20px;
 }
