@@ -33,7 +33,9 @@
         font-size: 30px;
         line-height: 40px;
     }
-    
+    .menu_btn {
+        display: block;
+    }
     /*-------------mb-header-------------*/
     .top-header{
         width: 100%;
@@ -166,9 +168,8 @@
     .f_text{
         display: none;
     }
-    .f_logo{
-        width: 40%;
-        height: 5%;
+    .logo_media{
+        width: 50%;
     }
     .copyright{
         font-size: 12px;
@@ -233,7 +234,86 @@
 /*-------------mb-全部商品--------------- */
 
 /*-------------mb-商品內頁--------------- */
+    .prodinfo_container{
+        display: flex;
+        flex-direction: column;
+    }
+    .prodinfo{
+        padding: 0;
+    }
+    .prod-top_pic{
+        margin: 10px;
+    }
+    .information{
+        gap: 10px;
+    }
+    .information h1{
+        font-size: 30px;
+    }
+    .information h1::after{
+        content: '★★★★★(5/5)';
+        color: #D56A16;
+    }
+    .information p{
+        display: none;
+    }
+    .information span::before{
+        content: "建議售價";
+        color: #000;
+        font-size: 16px;
+        padding-inline: 5px;
+    }
+    .information p.info{
+        order: 2;
+        display: block;
+        width: 100%;
+        font-size: 14px;
+    }
+    .join {
+        order: 4;
+    }
+    .join input{
+        width: 40%;
+    }
+    .information button.join-cart{
+        width: 100%;
+        order: 5;
+    }
 
+    .maybeLike h2{
+        font-size: 30px;
+    }
+    .other-shop{
+        display: flex;
+    }
+    .ratings {
+        display: none;
+        font-size: 10px;
+        /* width: 100%; */
+    }
+    .other-card{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        /* justify-content: space-between; */
+    }
+    .pic{
+        width: 50%;
+    }
+    .other-card-prod-p{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .other-card p{
+        width: 50%;
+        font-size: 18px;
+    }
+    p.prod-info_price{
+        font-size: 13px;
+        /* display: none; */
+    }
 /*-------------mb-購物車--------------- */
     
 /*-------------mb-登入、註冊------------- */
