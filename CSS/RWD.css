@@ -237,24 +237,36 @@
         position: relative;
     }
     .prod-sidebar{
-        position:sticky;
-        left: -200px;
+        display: none;
     }
-    .selection{
-        margin: 0;
-        padding: 0;
-        /* display: none; */
-    }
-    .selection h2{
-        padding: 0;
-        font-size: 30px;
-    }
-    .selection a{
-        padding: 0;
-        font-size: 18px;
+    .mb-prod-sidebar{
+        display: none;
+        margin: 0 auto;
+        padding: 10px;
     }
     .shops{
-        width: 50%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        justify-content: center;
+    }
+    .shops h3{
+        font-size: 30px;
+        padding: 10px 14px;
+    }
+    .shops p.selection-info{
+        font-size: 14px;
+        line-height: 20px;
+        padding: 0 10px;
+        width: 97%;
+    }
+    .shops_pic{
+        width: 30%;
+    }
+    p.shops-card-text{
+        font-size: 10px;
     }
 /*-------------mb-商品內頁--------------- */
     .prodinfo_container{
