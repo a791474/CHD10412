@@ -667,10 +667,6 @@ div.rside_read_more a{
     text-decoration-color: transparent;
 }
 
-/* div.rside_read_more a:visited{
-    color: #f00;
-} */
-
 div.rside_read_more a:hover{
     text-decoration-color: #222;
 }
@@ -867,9 +863,9 @@ div.all-shops-container{
 .shops_pic a img{
     width: 100%;
     height: 100%;
+    vertical-align: top;
     transform: scale(1);
     transition:all 0.3s linear;
-    vertical-align: top;
 }
 
 .shops_pic a img:hover{
@@ -955,7 +951,6 @@ li.shops-page-item a:hover{
 }
 
 .prod-under_pic{
-    /* gap: 5px; */
     width: 50%;
     margin: auto;
     display: flex;
@@ -1069,7 +1064,6 @@ li.shops-page-item a:hover{
 }
 
 .maybeLike h2{
-    width: 100%;
     padding: 10px;
     font-size: 40px;
     text-align: center;
@@ -1438,16 +1432,22 @@ fieldset button:hover{
     margin-bottom: 30px;
 }
 
-.other_login .login_group{
-    gap: 48px;
+.login_group{
+    gap: 30px;
     display: flex;
+    transform: scale(1.0);
     justify-content: center;
 }
+.login_group a{
+    transform: scale(1);
+    transition:all 0.3s linear;
+}
 
-.login_group{
-    transform: scale(1.0);
-}
 .login_group a:hover{
-    transform: scale(1.1);
-    transition:all 0.5s ease 0s;
+    transform: scale(1.2);
 }
+
+.login_group a i{
+    font-size: 30px;
+}
+
