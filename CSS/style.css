@@ -189,7 +189,7 @@ i.search_icons{
     top: 0;
     left: 0;
     background-color: #fff;
-    overflow-x: hidden; /* 隱藏邊條的內容 */
+    overflow: hidden; /* 隱藏邊條的內容 */
 }
 
 .switch_in { /* 側邊欄收進去的寬度及快慢秒數 */
@@ -567,7 +567,7 @@ footer{
 
 /*-------------關於我們 body-------------*/
 
-div.about_body{
+.about_body{
     width: 100%;
     max-width: 1440px;
     margin: auto;
@@ -580,26 +580,26 @@ div.about_body{
     font-family: 'Noto Sans TC', sans-serif;
 }
 
-div.about_pic{
+.about_pic{
     width: 100%;
 }
 
-div.about_pic img{
+.about_pic img{
     width: 100%;
     vertical-align: top;
 }
 
-div.about_text{
+.about_text{
     width: 100%;
 }
 
-div.about_text h3{
+.about_text h3{
     width: 100%;
     padding: 30px 10px;
     font-size: 30px;
 }
 
-div.about_text p{
+.about_text p{
     width: 90%;
     padding: 0 10px;
     font-size: 18px;
@@ -607,18 +607,18 @@ div.about_text p{
     letter-spacing: 2px;
 }
 
-div.about_address p{
+.about_address p{
     width: 100%;
     font-size: 20px;
     line-height: 40px;
     letter-spacing: 2px;
 }
 
-div.about_map{
+.about_map{
     width: 100%;
 }
 
-div.about_map iframe{
+.about_map iframe{
     width: 100%;
 }
 
@@ -651,7 +651,7 @@ div.about_map iframe{
     vertical-align: top;
 }
 
-div.rside{ 
+.rside{ 
     width: 50%;
     margin:auto 0;
     display: flex;
@@ -659,12 +659,12 @@ div.rside{
     font-family: 'Noto Sans TC', sans-serif;
 }
 
-div.rside h3{
+.rside h3{
     font-size: 30px;
     font-weight: bold;
 }
 
-div.rside_title{
+.rside_title{
     height: 180px;
     font-size: 20px;
     line-height: 30px;
@@ -672,32 +672,32 @@ div.rside_title{
     border: 2px solid #000;
     border-left: none;
 }
-
-div.rside_text{
+.rside_text{
     height: 220px;
-    font-size: 16px;
-    line-height: 28px;
     padding: 10px;
     border: 2px solid #000;
     border-top: none;
     border-left: none;
 }
+.rside_text p{
+    font-size: 16px;
+    line-height: 28px;
+}
 
-div.rside_read_more{
+.rside_read_more{
     height: 140px;
     padding: 10px;
     font-size: 40px;
-    line-height: 50px;
     border-right: 2px solid #000;
 }
 
-div.rside_read_more a{
+.rside_read_more a{
     color: #000;
     transition: 0.2s linear;
     text-decoration-color: transparent;
 }
 
-div.rside_read_more a:hover{
+.rside_read_more a:hover{
     text-decoration-color: #222;
 }
 
@@ -715,6 +715,7 @@ div.rside_read_more a:hover{
     height: 357px;
     margin: auto;
     border: 1px solid #000;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .other_article a{
@@ -737,13 +738,11 @@ div.rside_read_more a:hover{
 .arti_date{
     padding: 5px 12px;
     font-size: 18px;
-    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .arti_title{
     padding: 5px 12px;
     font-size: 20px;
-    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .other_article:hover{
@@ -752,7 +751,7 @@ div.rside_read_more a:hover{
 
 /*-------------聯絡我們-------------*/
 
-div.contact_body{
+.contact_body{
     width: 100%;
     max-width: 1440px;
     margin: auto;
@@ -763,18 +762,18 @@ div.contact_body{
     font-family: 'Noto Sans TC', sans-serif;
 }
 
-div.contact_body h2{
+.contact_body h2{
     font-size: 30px;
     font-weight: 600;
     text-align: center;
 }
 
-div.contact_body p{
+.contact_body p{
     font-size: 20px;
     font-weight: 600;
 }
 
-div.contact_body input{
+.contact_body input{
     width: 100%;
     border: none;
     font-size: 18px;
@@ -789,13 +788,13 @@ div.contact_body input{
     line-height: 40px;
 }
 
-div.select_Q select{
+.select_Q select{
     width: 100%;
     font-size: 20px;
     font-weight:600;
 }
 
-div.input_text textarea{
+.input_text textarea{
     width: 100%;
     resize: none;
     font-size: 20px;
@@ -832,8 +831,6 @@ div.input_text textarea{
     max-width: 1440px;
     position: relative;
     display: flex;
-    /* align-items: center; */
-    /* flex-direction: column; */
     margin: auto;
     font-family: 'Noto Sans TC', sans-serif;
 }
@@ -938,6 +935,10 @@ ul.next-btn a{
     text-decoration: none;
 }
 
+ul.next-btn a p{
+    color: #000;
+}
+
 li.shops-page-item{
     width: 30px;
     height: 30px;
@@ -986,7 +987,7 @@ li.shops-page-item a:hover{
 }
 
 .prod-pic-big{
-    width: 50%;
+    height: 462px;
     margin: 5px;
     border: 1px solid #666;
 }
@@ -995,7 +996,11 @@ li.shops-page-item a:hover{
     width: 100%;
     height: 100%;
     cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
 }
+/* ↓小圖換大圖淡出淡入效果↓ */
+.fade-in{opacity: 1;}
+.fade-out{opacity: 0;}
 
 .prod-under_pic{
     width: 50%;
@@ -1011,7 +1016,7 @@ li.shops-page-item a:hover{
     display: flex;
     align-items: center;
     /* width: 90px; */
-    height: 100px;
+    height: 100%;
     
 }
 
@@ -1021,6 +1026,7 @@ li.shops-page-item a:hover{
 
 .prod-pic-small img{
     width: 100%;
+    height: 100%;
     cursor: pointer;
     vertical-align: top;
 }
@@ -1230,7 +1236,7 @@ p.prod-info_price{
     padding: 5px 10px;
 }
 
-div.cart-btn{
+.cart-btn{
     width: 100%;
     gap: 10px;
     display: flex;
@@ -1238,7 +1244,7 @@ div.cart-btn{
     font-family: 'Noto Sans TC', sans-serif;
 }
 
-div.cart-btn input{
+.cart-btn input{
     width: 30%;
     font-size: 24px;
     cursor:pointer ;
@@ -1247,15 +1253,15 @@ div.cart-btn input{
     border-radius: 8px;
     padding-block: 10px;    
 }
-div input.btnMinus, input.btnPlus{
+ input.btnMinus, input.btnPlus{
     background-color: #ddd;
     transition: all 0.3s linear;
 }
-div input.btnMinus:hover, input.btnPlus:hover{
+ input.btnMinus:hover, input.btnPlus:hover{
     background-color: #EEE5DA;
 }
 
-div.cart-btn input.qty{
+.cart-btn input.qty{
     width: 30%;
     font-size: 24px;
     text-align: center;
@@ -1265,7 +1271,7 @@ div.cart-btn input.qty{
     background-color: transparent;
 }
 
-div.cart-btn i{
+.cart-btn i{
     font-size: 30px;
     padding: 0 10px;
     cursor: pointer;
@@ -1273,7 +1279,7 @@ div.cart-btn i{
     transform: scale(1);
 }
 
-div.cart-btn i:hover{
+.cart-btn i:hover{
     transform: scale(1.3);
 }
 

@@ -1,7 +1,7 @@
 /* ↓創造一個選取器↓ 意思為只要遇到叫做col-的class都做box-sizing、padding的屬性*/
-[class*="col-"]{ box-sizing: border-box; padding: 0 10px;}
+/* [class*="col-"]{ box-sizing: border-box; padding: 0 10px;} */
 /* 給最外面父層的值 */
-.col-1{width: 8.333333%;}
+/* .col-1{width: 8.333333%;}
 .col-2{width: 16.666666%;}
 .col-3{width: 25%;}
 .col-4{width: 33.333333%;}
@@ -12,7 +12,7 @@
 .col-9{width: 75%;}
 .col-10{width: 83.333333%;}
 .col-11{width: 91.666666%;}
-.col-12{width: 100%;}
+.col-12{width: 100%;} */
 
 /* ↓768px~1024之間觸發↓ */
 @media (width <= 768px){
@@ -37,20 +37,31 @@
         display: block;
     }
     /*-------------mb-header-------------*/
+    .title{
+        transform: translate(-48%,50%)
+    }
+    .title h1{
+        font-size: 30px;
+    }
     .top-header{
         width: 100%;
         display: flex;
     }
-    div.navbar{
+    .navbar{
         display: none;
     }
-    div.banner{
+    .banner{
         height: 200px;
         background-size: cover;
         background-position: center;
     }
 
+/*-------------------mb-漢堡---------------------*/
 
+.switch_out { /* 側邊欄展開的寬度及快慢秒數 */
+    width: 80%;
+    transition: width var(--collapse_time);
+}
 /*-------------mb-index-shop-section-------------*/
     .shop_section h2{
         font-size: 22px;
@@ -180,53 +191,112 @@
     }
 
 /*-------------mb-關於我們-------------*/
-    div.about_body{
+    .about_body{
         display: flex;
         flex-direction: column;
     }
-    div.about_text{
+    .about_text{
         order: 1;
     }
-    div.about_text h3{
+    .about_text h3{
         width: 100%;
         padding: 30px 0;
         font-size: 28px;
         font-weight: 600;
         text-align: center;
     }
-    div.about_text p{
+    .about_text p{
         width: 100%;
         padding-inline: 15px;
         font-size: 16px;
         text-align: start;
     }
-    div.about_pic{
+    .about_pic{
         width: 95%;
         box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.2);
         order: 2;
     }
-    div.about_address{
+    .about_address{
         order: 3;
     }
-    div.about_address p{
+    .about_address p{
         font-size: 16px;
         padding-top: 40px;
         padding-left: 10px;
         /* line-height: 30px; */
         letter-spacing: 0px;
     }
-    div.about_map{
+    .about_map{
         order: 4;
         width: 95%;
         box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.2);
     }
 /*-------------mb-最新消息-------------*/
     .news_container{
-        max-width: 768px;
+        display: flex;
+        flex-direction: column;
     }
-    
+    .top{
+        display: flex; 
+        flex-direction: column;
+    }
+    .news_pic{
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+    .rside{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border-left: 2px solid #000;
+        position: relative;
+    }
+    .rside h3{
+        font-size: 20px;
+    }
+    .rside_title{
+        /* display: none; */
+        width: 100%;
+        height: 100%;
+        line-height: 20px;
+        border-bottom: 2px solid #000;
+    }
+    .rside_text{
+        display: block;
+        border-bottom: none;
+        overflow: hidden;
+    }
+    .rside_text p{
+        font-size: 14px;
+        line-height: 26px;
+    }
+    .rside_read_more{
+        width: 33%;
+        display: flex;
+        font-size: 18px;
+        position: absolute;
+        top: 0;
+        right: -8px;
+        ::after{
+            content: '→';
+        }
+    }
+    .rside_read_more a{
+        text-decoration-color: #222;
+    }
+    .under{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .other_article{
+        height: 100%;
+        padding: 10px 0;
+    }
 /*-------------mb-聯絡我們-------------*/
-    div.contact_body{
+    .contact_body{
         width: 100%;
     }
     .contact_input_group{
@@ -281,15 +351,20 @@
     .prod-pic-big{
         flex: 1;
         order: 2;
+        margin: 3px;
+        height: 100%;
     }
 
     .prod-under_pic{
         order: 1;
         width: 20%;
-        margin: 0 0 0 4px;
+        margin: 0 3px 0 3px;
         display: flex;
         flex-direction: column;
         border: 1px solid #666;
+    }
+    .prod-pic-small{
+        height: 101px;
     }
     .prod-pic-small:nth-child(n + 2){
         border-left: none;
@@ -377,7 +452,7 @@
 /*-------------mb-購物車--------------- */
     
 /*-------------mb-登入、註冊------------- */
-    div.login_container, div.register_container{
+    .login_container, .register_container{
         width: 80%;
     }
 }
