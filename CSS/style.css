@@ -1138,27 +1138,6 @@ li.shops-page-item a:hover{
     width: 100%;
     vertical-align: top;
 }
-.ratings {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    color: #ddd; 
-    overflow: hidden;
-    font-size: 20px;
-    padding: 0 5px;
-    text-shadow: 0px 1px 0 #999;
-    width: 100%;
-}
-.full_star {
-    width: 78%; 
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 0 5px;
-    white-space: nowrap;
-    overflow: hidden;
-    color: #D56A16; 
-}
 
 .other-card p{
     padding: 0 5px;
@@ -1184,7 +1163,7 @@ p.prod-info_price{
     width: 100%;
     margin: auto;
     display: flex;
-    position: sticky;
+    position: relative;
     max-width: 1440px;
 }
 
@@ -1253,11 +1232,12 @@ p.prod-info_price{
     border-radius: 8px;
     padding-block: 10px;    
 }
- input.btnMinus, input.btnPlus{
+
+input.btnMinus, input.btnPlus{
     background-color: #ddd;
     transition: all 0.3s linear;
 }
- input.btnMinus:hover, input.btnPlus:hover{
+input.btnMinus:hover, input.btnPlus:hover{
     background-color: #EEE5DA;
 }
 
@@ -1284,9 +1264,14 @@ p.prod-info_price{
 }
 
 .col-3{
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    height: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: end;
+    /* justify-content: end; */
     flex-direction: column;
 }
 .col-3 h3{
@@ -1325,7 +1310,7 @@ p.prod-info_price{
 
 .toPay img{
     width: 15%;
-    top: 17px; right: 50px;
+    top: 14px; right: 50px;
     position: absolute;
 }
 

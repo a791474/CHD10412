@@ -1,18 +1,18 @@
 /* ↓創造一個選取器↓ 意思為只要遇到叫做col-的class都做box-sizing、padding的屬性*/
 /* [class*="col-"]{ box-sizing: border-box; padding: 0 10px;} */
 /* 給最外面父層的值 */
-/* .col-1{width: 8.333333%;}
-.col-2{width: 16.666666%;}
+/* .col-1{width: 8.333333%;} */
+/* .col-2{width: 16.666666%;} */
 .col-3{width: 25%;}
-.col-4{width: 33.333333%;}
-.col-5{width: 41.666666%;}
-.col-6{width: 50%;}
-.col-7{width: 58.333333%;}
-.col-8{width: 66.666666%;}
+/* .col-4{width: 33.333333%;} */
+/* .col-5{width: 41.666666%;} */
+/* .col-6{width: 50%;} */
+/* .col-7{width: 58.333333%;} */
+/* .col-8{width: 66.666666%;} */
 .col-9{width: 75%;}
-.col-10{width: 83.333333%;}
-.col-11{width: 91.666666%;}
-.col-12{width: 100%;} */
+/* .col-10{width: 83.333333%;} */
+/* .col-11{width: 91.666666%;} */
+/* .col-12{width: 100%;} */
 
 /* ↓768px~1024之間觸發↓ */
 @media (width <= 768px){
@@ -378,10 +378,6 @@
     .information h1{
         font-size: 30px;
     }
-    /* .information h1::after{
-        content: '★★★★★(5/5)';
-        color: #D56A16;
-    } */
     .information p{
         display: none;
     }
@@ -420,10 +416,6 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
-    .ratings {
-        display: none;
-        font-size: 10px;
-    }
     .other-card{
         margin: 0;
         padding: 0;
@@ -450,14 +442,58 @@
         /* display: none; */
     }
 /*-------------mb-購物車--------------- */
-    
+    .cart_container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .col-9{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .cart-prod{
+        padding: 0 3px;
+    }
+    .cart-item{
+        gap: 0px;
+        margin: 10px 0;
+    }
+    .detail-text h2{
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 20px;
+    }
+    .detail-text span{
+        font-size: 14px;
+    }
+    .cart-btn input, .cart-btn input.qty{
+        font-size: 18px;
+    }
+    .col-3{
+        width:100%
+    }
+    .col-3 h3{
+        width: 95%;
+        margin: 0 auto;
+        font-size: 20px;
+    }
+    .checkout-info{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .toPay-icons{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .toPay{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .toPay img{
+        width: 10%; 
+        top: 17px;
+    }
 /*-------------mb-登入、註冊------------- */
     .login_container, .register_container{
         width: 80%;
     }
 }
-/* ↓1024px~1200px之間觸發↓ */
-/* @media (min-width:1024px){} */
-
-/* ↓1200px~1440px之間觸發↓ */
-/* @media (min-width:1200px){} */
