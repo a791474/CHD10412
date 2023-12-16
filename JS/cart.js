@@ -20,44 +20,35 @@ function init(){
 	}
 }
 //------------------------------------
-// 更新購物車
-function updateCart(productId, quantity) {
-    const product = products.find(p => p.id === productId);
-    const cartItem = cart.find(item => item.product.id === productId);
+const productData = {
+    title: "日式巨峰窯花瓶",
+    price: "3990",
+    description:
+        "源自日本的巨峰窯花瓶，以其精湛的陶藝工藝與自然的靈感而聞名。每一個花瓶都是匠人用心雕琢的藝術品，展現出獨特的日式美學。瓶身造型優雅，仿如巍峨的山峰，激發著對大自然的敬畏之情。精緻的釉面呈現柔和的色澤，讓花卉在其中綻放出自然、純粹的美。每一次插花都如同在日本秋日的山川間漫遊，感受四季的變幻。"
+};
 
-    if (quantity > 0) {
-        // 商品數量大於 0，更新或新增購物車項目
-        if (cartItem) {
-            cartItem.quantity = parseInt(quantity);
-            cartItem.total = cartItem.quantity * product.price; // 新增計算總金額
-        } else {
-            cart.push({ product, quantity: parseInt(quantity), total: product.price * parseInt(quantity) });
-        }
-    } else {
-        // 商品數量為 0，移除購物車項目
-        if (cartItem) {
-            cart.splice(cart.indexOf(cartItem), 1);
-        }
-    }
+function createProductInfoBlock(data) {
+    const container = document.createElement("div");
+    container.classList.add("information");
 
-    updateCartView();
+    container.innerHTML = `
+        <h1>${data.title}</h1>
+        <p>建議售價</p>
+        <span>NT$${data.price}</span>
+        <div class="join">
+            <input type="button" value="-" class="btnMinus">
+            <input type="text" value="0" class="qty">
+            <input type="button" value="+" class="btnPlus">
+        </div>
+        <button type="submit" class="join-cart">加入購物車</button>
+        <p class="info">${data.description}</p>
+    `;
+
+    return container;
 }
 
-// 更新購物車顯示
-function updateCartView() {
-    const emptyCart = document.getElementById('empty-cart');
-    const checkoutInfo = document.querySelector('.checkout-info');
-    const totalPrice = document.getElementById('total-price');
+const prodinfoContainer = document.querySelector(".prodinfo_container");
 
-    if (cart.length === 0) {
-        emptyCart.style.display = 'block';
-        checkoutInfo.style.display = 'none';
-    } else {
-        emptyCart.style.display = 'none';
-        checkoutInfo.style.display = 'block';
-        const total = cart.reduce((acc, item) => acc + item.total, 0);
-        totalPrice.textContent = `總價: $${total.toFixed(2)}`;
-    }
-}
-
+const productInfoBlock = createProductInfoBlock(productData);
+prodinfoContainer.appendChild(productInfoBlock);
 window.addEventListener("load", init, false);	
