@@ -302,6 +302,7 @@
     .contact_input_group{
         width: 80%;
     }
+
 /*-------------mb-全部商品--------------- */
     .shops_body{
         position: relative;
@@ -329,7 +330,7 @@
     .shops p.selection-info{
         font-size: 14px;
         line-height: 20px;
-        padding: 0 10px;
+        padding: 10px;
         width: 97%;
     }
     .shops_pic{

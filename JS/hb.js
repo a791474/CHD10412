@@ -8,7 +8,7 @@ let menu_list = document.getElementById("menu_list");
 let menu_content = document.getElementById("menu_content");
 
 function open_menu () {
-    if(menu_list == null) return;
+    // if(menu_list == null) return;
     menu_list.classList.toggle("show");
     menu_list.classList.toggle("hidden");
     setTimeout(() => {

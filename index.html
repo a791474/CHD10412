@@ -289,7 +289,21 @@
         </div>
     </div>
 </footer>
-<script src="JS/nav-onscroll-index.js"></script>
+<script>
+    //PC跟mb需消失高度不同，inlineJS去設定不同視窗吃不同JS檔案。
+    function loadJS(url) {
+            var script = document.createElement("script");
+            script.src = url;
+            document.head.appendChild(script);
+        }
+        if (window.innerWidth >= 768) {
+            // PC 版本
+            loadJS("JS/nav-onscroll-index.js");
+        } else {
+            // Mobile 版本
+            loadJS("JS/nav-onscroll-otherPage.js");
+        }
+</script>
 <button id="topBtn">TOP</button>
 </body>
 </html>
