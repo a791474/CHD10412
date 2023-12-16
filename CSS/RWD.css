@@ -288,11 +288,11 @@
         text-decoration-color: #222;
     }
     .under{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
+        display: flex;
+        flex-direction: column;
     }
     .other_article{
-        height: 100%;
+        height: auto;
         padding: 10px 0;
     }
 /*-------------mb-聯絡我們-------------*/
