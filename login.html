@@ -17,6 +17,8 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <!-- 漢堡的JS -->
     <script src="JS/hb.js" defer></script>
+    <!-- 登入燈箱的JS -->
+    <script src="JS/loginLightBox.js" defer></script>
     <!-- FontAwesome icon導入 -->
     <script src="https://kit.fontawesome.com/080f2811bc.js"crossorigin="anonymous"></script>
 </head>
@@ -81,6 +83,26 @@
     </div>
 </div>
 
+<!-- 登入燈箱的背景 -->
+<div id="overlay"></div>
+<!-- 燈箱本人 -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <!-- 登入表單 -->
+        <form id="loginForm">
+            <label for="username">使用者名稱：</label>
+            <input type="text" id="username" name="username" placeholder="Yee" required>
+
+            <label for="password">密碼：</label>
+            <input type="password" id="password" name="password" placeholder="(6-12個英數字混合字元)" required>
+
+            <button type="button" onclick="login()">登入</button>
+        </form>
+    </div>
+</div>
+
+<!-- --------------------------------------------------------------- -->
 <div class="container">
     <div class="banner">
         <div class="top-header" id="top1">
@@ -120,8 +142,6 @@
         </div>
     </div>
 </div>
-
-
 
     <div class="login_container">
         <fieldset>
