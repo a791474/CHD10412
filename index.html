@@ -26,12 +26,11 @@
     <script src="JS/jquery-3.7.1.js"></script>
 </head>
 <body>
-
 <!-- 透過Google Font icon將文字+class名稱轉成icon圖示 -->
 <div id="menu_list" class="show"> 
     <div class="backdrop" onclick="close_menu()"></div>
     <div class="menu custom_menu_css switch_out" id="menu_content">
-        <div class="collapse_header">
+        <div class="collapse_header" onclick="close_menu()">
             <span class="person material-icons">
                 list
             </span>
@@ -47,37 +46,37 @@
                 <span class="material-icons">
                     groups
                 </span>
-                關於我們
+                <h6>關於我們</h6>
             </div>
             <div class="col" onclick="go_to('news')">
                 <span class="material-icons">
                     grade
                 </span>
-                最新消息
+                <h6>最新消息</h6>
             </div>
             <div class="col" onclick="go_to('all_shops')">
                 <span class="material-icons">
                     inventory_2
                 </span>
-                全部商品
+                <h6>全部商品</h6>
             </div>
             <div class="col" onclick="go_to('contact us')">
                 <span class="material-icons">
                     support_agent
                 </span>
-                聯絡我們
+                <h6>聯絡我們</h6>
             </div>
             <div class="col" onclick="go_to('login')">
                 <span class="material-icons">
                     person
                 </span>
-                會員登入
+                <h6>會員登入</h6>
             </div>
             <div class="col" onclick="go_to('cart')">
                 <span class="material-icons">
                     shopping_cart
                 </span>
-                購物車
+                <h6>購物車</h6>            
             </div>
             <div class="sidebar-pic">
                 <img src="./imgs/index_footer_logo.png" alt="fun">
@@ -87,7 +86,7 @@
 </div>
 
 <!-- 登入燈箱的背景 -->
-<div id="overlay"></div>
+<div id="overlay" onclick="closeModal()"></div>
 <!-- 燈箱本人 -->
 <div id="loginModal" class="modal">
     <div class="modal-content">
@@ -130,7 +129,7 @@
             <div class="h_logo">
                 <a href="index.html"><img src="imgs/index_header_logo.png" alt="logo"></a>
             </div>
-            <button class="menu_btn" onclick="open_menu()">
+            <button class="menu_btn" id="menu_btn" onclick="open_menu()">
                 <span class="material-icons">
                     menu
                 </span>

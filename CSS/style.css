@@ -171,8 +171,13 @@ i.search_icons{
 .hidden {
     display: none;
 }
-
+.collapse_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .backdrop{
+    /* display: none; */
     flex: none;
     position: absolute;
     top: 0;
@@ -187,9 +192,9 @@ i.search_icons{
     position: absolute;
     z-index: 10;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: #fff;
-    overflow: hidden; /* 隱藏邊條的內容 */
+    overflow: hidden;
 }
 
 .switch_in { /* 側邊欄收進去的寬度及快慢秒數 */
@@ -197,7 +202,7 @@ i.search_icons{
     transition: width var(--collapse_time);
 }
 .switch_out { /* 側邊欄展開的寬度及快慢秒數 */
-    width: 70%;
+    width: 600%;
     transition: width var(--collapse_time);
 }
 
@@ -218,7 +223,7 @@ i.search_icons{
     height: 100%;
 }
 .hb-search{
-    width: 50%;
+    width: 100%;
     padding:2px 5px;
     border-radius: 10px;
     font-size: 12px;
@@ -227,18 +232,26 @@ i.search_icons{
 }
 .col {
     display: flex;
-    padding: 5px 20px ;
+    padding: 10px 10px;
+    width: 100%;
+    white-space: nowrap;
     align-items: center;
-    white-space:nowrap;
-}
-.col span{
-    width: 25px;
-    height: 25px;
-    padding-right: 10px;
+    justify-content: center;
+    border-bottom: 1px solid #222;
 }
 
+.col span{
+    width: 26px;
+    height: 30px;
+    font-size: 30px;
+    padding: 0 36px 0 0 ;
+}
+.col h6{
+    font-size: 20px;
+    /* width: 100%; */
+}
 .sidebar-pic{
-    width: 90%;
+    width: 60%;
     padding: 10px;
     animation: fade 1s linear 0s;
 }
@@ -266,8 +279,9 @@ i.search_icons{
     align-items: center;
 }
 .collapse_header .person {
-    max-width: 30px;
-    max-height: 30px;
+    font-size: 30px;
+    max-width: 50px;
+    max-height: 50px;
     padding: 5px 10px 5px 20px;
 }
 
@@ -295,11 +309,20 @@ i.search_icons{
     transform: translate(-50%, -50%);
     background-color: #fefefe;
     border: 1px solid #888;
-    animation: fadeInOut 0.5s linear 0s;;
 }
-@keyframes fadeInOut {
+@keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+@keyframes fadeOut {
+    100% { opacity: 0; }
+    0% { opacity: 1; }
+}
+.fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+}
+.fadeOut {
+    animation: fadeOut 0.5s ease-in-out;
 }
 .modal-content{
     position: relative;

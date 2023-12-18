@@ -17,6 +17,8 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <!-- 漢堡的JS -->
     <script src="JS/hb.js" defer></script>
+    <!-- 登入判斷JS -->
+    <script src="JS/loginLightBox.js"></script>
     <!-- onScroll -->
     <script src="JS/nav-onscroll-user.js" defer></script>
     <!-- FontAwesome icon導入 -->
@@ -29,7 +31,7 @@
 <div id="menu_list" class="show"> 
     <div class="backdrop" onclick="close_menu()"></div>
     <div class="menu custom_menu_css switch_out" id="menu_content">
-        <div class="collapse_header">
+        <div class="collapse_header" onclick="close_menu()">
             <span class="person material-icons">
                 list
             </span>
@@ -45,61 +47,42 @@
                 <span class="material-icons">
                     groups
                 </span>
-                關於我們
+                <h6>關於我們</h6>
             </div>
             <div class="col" onclick="go_to('news')">
                 <span class="material-icons">
                     grade
                 </span>
-                最新消息
+                <h6>最新消息</h6>
             </div>
             <div class="col" onclick="go_to('all_shops')">
                 <span class="material-icons">
                     inventory_2
                 </span>
-                全部商品
+                <h6>全部商品</h6>
             </div>
             <div class="col" onclick="go_to('contact us')">
                 <span class="material-icons">
                     support_agent
                 </span>
-                聯絡我們
+                <h6>聯絡我們</h6>
             </div>
             <div class="col" onclick="go_to('login')">
                 <span class="material-icons">
                     person
                 </span>
-                會員登入
+                <h6>會員登入</h6>
             </div>
             <div class="col" onclick="go_to('cart')">
                 <span class="material-icons">
                     shopping_cart
                 </span>
-                購物車
+                <h6>購物車</h6>            
             </div>
             <div class="sidebar-pic">
-                <img src="./imgs/shiba_smile.jpg" alt="fun">
+                <img src="./imgs/index_footer_logo.png" alt="fun">
             </div>
         </div>
-    </div>
-</div>
-
-<!-- 登入燈箱的背景 -->
-<div id="overlay"></div>
-<!-- 燈箱本人 -->
-<div id="loginModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <!-- 登入表單 -->
-        <form id="loginForm">
-            <label for="username">使用者名稱：</label>
-            <input type="text" id="username" name="username" placeholder="Yee" required>
-
-            <label for="password">密碼：</label>
-            <input type="password" id="password" name="password" placeholder="(6-12個英數字混合字元)" required>
-
-            <button type="button" onclick="login()">登入</button>
-        </form>
     </div>
 </div>
 
@@ -144,33 +127,34 @@
     </div>
 </div>
 
-    <div class="login_container">
-        <fieldset>
-            <legend>會員登入</legend>
-            <input type="email" placeholder="帳號">
-            <input type="password" placeholder="密碼(6-12個英數字混合字元)">
-            <button type="submit" value="" name="" onclick="">登入</button>
-            <a href="register.html" class="goto_reg">前往註冊</a>
-        </fieldset>
-        <div class="member_link">
-            <p>還不是會員?點擊前往註冊</p>
-            <a href="#">忘記密碼</a>
-        </div>
-        <div class="other_login">
-            <h6>以其他方式登入</h6>
-            <div class="login_group">
-                <a href="#" style="text-decoration: none;">
-                    <i class="fa-brands fa-google" ></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-line"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-            </div>
+<div class="login_container">
+    <fieldset>
+        <legend>會員登入</legend>
+        <input type="email" id="username" name="username" placeholder="帳號" required>
+        <input type="password" id="password" name="password" placeholder="密碼(6-12個英數字混合字元)" required>
+        <div id="errorMessage" class="error-message"></div>
+        <button type="submit" onclick="login()">登入</button>
+        <a href="register.html" class="goto_reg">前往註冊</a>
+    </fieldset>
+    <div class="member_link">
+        <p>還不是會員?點擊前往註冊</p>
+        <a href="#">忘記密碼</a>
+    </div>
+    <div class="other_login">
+        <h6>以其他方式登入</h6>
+        <div class="login_group">
+            <a href="#" style="text-decoration: none;">
+                <i class="fa-brands fa-google"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-line"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
         </div>
     </div>
+</div>
 
 <footer>
     <div class="f_container">            

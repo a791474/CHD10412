@@ -3,17 +3,27 @@ const overlay = document.getElementById('overlay');
 const loginModal = document.getElementById('loginModal');
 const usernameDisplay = document.getElementById('usernameDisplay');
 
+
 loginButton.addEventListener('click', openModal);
 
 // 打開燈箱
 function openModal() {
     document.getElementById('overlay').style.display = 'block';
     document.getElementById('loginModal').style.display = 'block';
+    loginModal.classList.add('fadeIn');
 }
 // 關閉燈箱
 function closeModal() {
     document.getElementById('overlay').style.display = 'none';
     document.getElementById('loginModal').style.display = 'none';
+    loginModal.classList.remove('fadeIn');
+    loginModal.classList.add('fadeOut');
+    // 在 fadeOut 的持續時間後，移除 fadeOut 並隱藏燈箱
+    setTimeout(() => {
+        loginModal.classList.remove('fadeOut');
+        overlay.style.display = 'none';
+        loginModal.style.display = 'none';
+    }, 100);
 }
 
 function login() {

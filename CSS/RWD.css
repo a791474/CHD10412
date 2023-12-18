@@ -218,12 +218,17 @@
     }
     .about_address{
         order: 3;
+        width: 100%;
+
     }
-    .about_address p{
+    .about_address p.PC{
+        display: none;
+    }
+    .about_address p.mb{
+        display: block;
         font-size: 16px;
-        padding-top: 40px;
-        padding-left: 10px;
-        /* line-height: 30px; */
+        padding-left: 15px; 
+        line-height: 30px;
         letter-spacing: 0px;
     }
     .about_map{
