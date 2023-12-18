@@ -159,90 +159,103 @@
                 </div>
             </div>
         </div>
-        <div class="title">
+        <!-- <div class="title">
             <h1>購物車　</h1>
-        </div>
+        </div> -->
     </div>
 </div>
 <!-- --------------------------------------------------------------- -->
 
 <div class="cart_container">
+    <h1>購物車</h1>
     <div class="col-9" id="cartContainer">
-        <div class="cart-prod">
-            <div class="cart-item">
-                <div class="item-pic">
-                    <a href="product info.html">
-                        <img src="imgs/all shops - prod1.png" alt="購物車商品照">
-                    </a>
+    <div class="cart-item">
+        <div class="item-pic">
+            <a href="product info.html">
+                <img src="imgs/prodinfo-pic-big.png" alt="購物車商品照">
+            </a>
+        </div>
+        <div class="cart-detail">
+                <div class="cart-card-title">
+                    <span class="name">日式巨峰窯花瓶</span>
+                    <span class="comm" style="display: none;">3990</span>
+                    <span>$<span class="total">3990</span></span>
                 </div>
-                <div class="cart-detail">
-                    <div class="detail-text">
-                        <a href="product info.html">
-                            <h2>Noritake 三入盤組</h2>
-                            <span>NT$999</span>
-                        </a>
-                    </div>
-                    <div class="cart-btn">
+                <div class="cart-btns">
+                    <div class="cart-inputs">
                         <input type="button" value="-" class="btnMinus">
-                        <input type="text" value="0" class="qty">
+                        <input type="text" value="1" class="qty">
                         <input type="button" value="+" class="btnPlus">
-                        <i class="fa-regular fa-trash-can btn-delete"></i>
                     </div>
+                    <div class="remove">
+                        <i class="fa-regular fa-trash-can remove"></i>
+                    </div>
+                </div>
+        </div>
+    </div>
+    
+    <div class="cart-item">
+        <div class="item-pic">
+            <a href="product info.html">
+                <img src="imgs/all shops - prod4.png" alt="購物車商品照">
+            </a>
+        </div>
+        <div class="cart-detail">
+            <div class="cart-card-title">
+                <span class="name">Nittoroyal 大盤</span>
+                <span class="comm" style="display: none;">699</span>
+                <span>$<span class="total">699</span></span>
+            </div>
+            <div class="cart-btns">
+                <div class="cart-inputs">
+                    <input type="button" value="-" class="btnMinus">
+                    <input type="text" value="1" class="qty">
+                    <input type="button" value="+" class="btnPlus">
+                </div>
+                <div class="remove">
+                    <i class="fa-regular fa-trash-can remove"></i>
                 </div>
             </div>
-            
-            <div class="cart-item">
-                <div class="item-pic">
-                    <a href="product info.html">
-                        <img src="imgs/all shops - prod4.png" alt="購物車商品照">
-                    </a>
+        </div>
+    </div>
+    <div class="cart-item">
+        <div class="item-pic">
+            <a href="product info.html">
+                <img src="imgs/all shops - prod10.png" alt="購物車商品照">
+            </a>
+        </div>
+        <div class="cart-detail">
+                <div class="cart-card-title">
+                    <span class="name">百華漆器碗</span>
+                    <span class="comm" style="display: none;">300</span>
+                    <span>$<span class="total">300</span></span>
                 </div>
-                <div class="cart-detail">
-                    <div class="detail-text">
-                        <a href="product info.html">
-                            <h2>Nittoroyal 大盤</h2>
-                            <span>NT$699</span>
-                        </a>
-                    </div>
-                    <div class="cart-btn">
+                <div class="cart-btns">
+                    <div class="cart-inputs">
                         <input type="button" value="-" class="btnMinus">
-                        <input type="text" value="0" class="qty">
+                        <input type="text" value="1" class="qty">
                         <input type="button" value="+" class="btnPlus">
-                        <i class="fa-regular fa-trash-can btn-delete"></i>
                     </div>
-                </div>
-            </div>
-            <div class="cart-item">
-                <div class="item-pic">
-                    <a href="product info.html">
-                        <img src="imgs/all shops - prod10.png" alt="購物車商品照">
-                    </a>
-                </div>
-                <div class="cart-detail">
-                    <div class="detail-text">
-                        <a href="product info.html">
-                            <h2>百華漆器碗</h2>
-                            <span>NT$300</span>
-                        </a>
-                    </div>
-                    <div class="cart-btn">
-                        <input type="button" value="-" class="btnMinus">
-                        <input type="text" value="0" class="qty">
-                        <input type="button" value="+" class="btnPlus">
-                        <i class="fa-regular fa-trash-can btn-delete"></i>
+                    <div class="remove">
+                        <i class="fa-regular fa-trash-can remove"></i>
                     </div>
                 </div>
             </div>
         </div>
-    </div> <!-- -->
+    </div>
+
     <div class="col-3">    
         <div class="checkout-info">
-            <span>訂單總額:</span>
-            <span>NT$1,998</span>
+            <span>商品總額:</span>
+            <span>$<span id="sum2">4989</span></span>
         </div>
         <div class="checkout-info">
             <span>運費:</span>
-            <span>NT$150</span>
+            <span>$<span id="shipping">100</span></span>
+        </div>
+        <div class="checkout-info">
+            <span>訂單總額:</span>
+            <span>$<span id="sum3">5089</span></span>
         </div>
         <h3>支援下列付款方式</h3>
         <div class="toPay-icons">
@@ -253,7 +266,7 @@
             <img src="imgs/cart-apple-pay.svg" alt="credit-AP">
         </div>
             <div class="toPay">
-                <button onclick="checkout()">結帳</button>
+                <button>結帳</button>
                 <img src="imgs/cart.svg" alt="cart">
             </div>
     </div>

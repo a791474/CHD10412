@@ -28,7 +28,6 @@ const productData = {
         "源自日本的巨峰窯花瓶，以其精湛的陶藝工藝與自然的靈感而聞名。每一個花瓶都是匠人用心雕琢的藝術品，展現出獨特的日式美學。瓶身造型優雅，仿如巍峨的山峰，激發著對大自然的敬畏之情。精緻的釉面呈現柔和的色澤，讓花卉在其中綻放出自然、純粹的美。每一次插花都如同在日本秋日的山川間漫遊，感受四季的變幻。"
 };
 
-
 function createProductInfoBlock(data) {
     const container = document.createElement("div");
     container.classList.add("information");
@@ -58,17 +57,15 @@ document.addEventListener("DOMContentLoaded", function () {
 function addToCart(title, price) {
     // 檢查是否有購物車資訊在 localStorage 中
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
     // 將新商品加入購物車
     cart.push({ title, price });
-
     // 將更新後的購物車資訊存回 localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
-
-    // 跳轉到購物車頁面
+    // 顯示已加入購物車後跳轉到購物車頁面結帳
+    window.alert('已加入購物車');
     window.location.href = 'cart.html';
 }
-
+// ↓陣列增加商品內容
 // const products = [
 //     {
 //     title: "日式巨峰窯花瓶",
