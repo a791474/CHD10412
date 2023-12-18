@@ -8,17 +8,12 @@
         display: none;
     }
     .index-title{
-        width: 70%;
-        transform: translate(-67%,-20%)
+        width: 100%;
+        transform: translate(-62%,360%)
     }
     .index-title h1.PC{
-        display: none;
-    }
-    .index-title h1.mb{
-        color: #666;
-        display: block;
-        font-size: 30px;
-        line-height: 40px;
+        
+        font-size: 18px;
     }
     .menu_btn {
         display: block;
@@ -304,7 +299,7 @@
         flex-direction: column;
     }
     h2.mb-prod-category{
-        font-size: 30px;
+        font-size: 26px;
         padding-left: 14px;
         margin-bottom: 10px;
     }
@@ -350,7 +345,7 @@
         justify-content: center;
     }
     .shops h3{
-        font-size: 30px;
+        font-size: 26px;
         padding: 10px 14px;
     }
     .shops p.selection-info{
@@ -487,19 +482,31 @@
         margin: 10px auto;
     }
     .cart-card-title span.name{
+        padding: 0;
         font-size: 18px;
         letter-spacing: 0;
         line-height: 20px;
     }
-    .cart-card-title span{
-        font-size: 16px;
+    #totalFather{
+        position: absolute;
+        right: -13px;
+        bottom: -17px;
+        font-size: 26px;
+    }
+    .cart-card-title span.total{
+        font-size: 26px;
     }
     .cart-inputs{
         width: 100%;
     }
     .cart-inputs input, .cart-inputs input.qty{
-        font-size: 18px;
-        width: 30%;
+        font-size: 16px;
+        width: 20%;
+    }
+    .remove{
+        position: absolute;
+        right: 0;
+        bottom: -15px;
     }
     .col-3{
         width:100%
@@ -507,11 +514,12 @@
     .col-3 h3{
         width: 95%;
         margin: 0 auto;
-        font-size: 20px;
+        font-size: 30px;
     }
     .checkout-info{
         width: 95%;
         margin: 0 auto;
+        line-height: 36px;
     }
     .toPay-icons{
         width: 95%;
