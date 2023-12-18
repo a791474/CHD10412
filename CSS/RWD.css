@@ -246,7 +246,6 @@
         font-size: 20px;
     }
     .rside_title{
-        /* display: none; */
         width: 100%;
         height: 100%;
         line-height: 20px;
@@ -255,7 +254,7 @@
     .rside_text{
         display: block;
         border-bottom: none;
-        overflow: hidden;
+        height: 220px;
     }
     .rside_text p{
         font-size: 14px;
@@ -272,7 +271,21 @@
             content: '→';
         }
     }
+    .rside_read_more_1{
+        width: 33%;
+        display: flex;
+        font-size: 18px;
+        position: absolute;
+        top: 5px;
+        right: -20px;
+        ::after{
+            content: '→';
+        }
+    }
     .rside_read_more a{
+        text-decoration-color: #222;
+    }
+    .rside_read_more_1 a{
         text-decoration-color: #222;
     }
     .under{
@@ -282,6 +295,7 @@
     .other_article{
         height: auto;
         padding: 10px 0;
+        position: relative;
     }
 /*-------------mb-聯絡我們-------------*/
     .contact_body{
