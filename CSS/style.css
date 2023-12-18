@@ -284,13 +284,16 @@ i.search_icons{
 }
 .modal {
     display: none;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 50%;
     left: 50%;
     z-index: 21;
+    width: 60%;
+    height: 60%;
     transform: translate(-50%, -50%);
     background-color: #fefefe;
-    padding: 50px;
     border: 1px solid #888;
     animation: fadeInOut 0.5s linear 0s;;
 }
@@ -298,21 +301,24 @@ i.search_icons{
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
-.close {
-    position: absolute;
-    top: 0px;
-    right: 6px;
-    font-size: 20px;
-    cursor: pointer;
-}
 .modal-content{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: 'Noto Sans TC', sans-serif;
 }
-.modal-content input{
-    padding: 3px 10px;
-    /* border: none; */
-    border-bottom-color: #000;
-    border-radius: 5px;
+.close {
+    position: absolute;
+    top: 30px;
+    right: 3px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.error-message{
+    color: #f00;
+    font-size: 20px;
+    margin-block: 5px;
 }
 /*--------footer CSS (all the same)--------*/
 
@@ -1383,11 +1389,15 @@ input.btnMinus:hover, input.btnPlus:hover{
 /*-------------登入、註冊------------- */
 
 .login_container, .register_container{
-    width: 34.7222%;
+    width: 60%;
     max-width: 1440px;
     margin: auto;
     padding: 50px 0;
     font-family: 'Noto Sans TC', sans-serif;
+}
+
+.register_container{
+    width: 34.7222%;
 }
 
 fieldset{
@@ -1473,7 +1483,7 @@ fieldset button:hover{
 }
 
 .other_login{
-    width: 70%;
+    width: 100%;
     margin: auto;
     padding-top: 35px;
     border-top: 3px solid rgba(0,0,0,0.1);

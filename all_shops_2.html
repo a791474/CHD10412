@@ -93,16 +93,35 @@
 <div id="loginModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
-        <!-- 登入表單 -->
-        <form id="loginForm">
-            <label for="username">使用者名稱：</label>
-            <input type="text" id="username" name="username" placeholder="Yee" required>
-
-            <label for="password">密碼：</label>
-            <input type="password" id="password" name="password" placeholder="(6-12個英數字混合字元)" required>
-
-            <button type="button" onclick="login()">登入</button>
-        </form>
+        <!-- 會員登入表單 -->
+        <div class="login_container">
+            <fieldset>
+                <legend>會員登入</legend>
+                <input type="email" id="username" name="username" placeholder="帳號" required>
+                <input type="password" id="password" name="password" placeholder="密碼(6-12個英數字混合字元)" required>
+                <div id="errorMessage" class="error-message"></div>
+                <button type="submit" onclick="login()">登入</button>
+                <a href="register.html" class="goto_reg">前往註冊</a>
+            </fieldset>
+            <div class="member_link">
+                <p>還不是會員?點擊前往註冊</p>
+                <a href="#">忘記密碼</a>
+            </div>
+            <div class="other_login">
+                <h6>以其他方式登入</h6>
+                <div class="login_group">
+                    <a href="#" style="text-decoration: none;">
+                        <i class="fa-brands fa-google"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-line"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
