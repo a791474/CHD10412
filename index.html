@@ -19,6 +19,8 @@
     <script src="JS/hb.js" defer></script>
     <!-- 登入燈箱的JS -->
     <script src="JS/loginLightBox.js" defer></script>
+    <!-- onScroll -->
+    <script src="JS/nav-onscroll-otherPage.js" defer></script>
     <!-- FontAwesome icon導入 -->
     <script src="https://kit.fontawesome.com/080f2811bc.js"crossorigin="anonymous"></script>
     <script src="JS/jquery-3.7.1.js"></script>
@@ -309,21 +311,6 @@
         </div>
     </div>
 </footer>
-<script>
-    //PC跟mb需消失高度不同，inlineJS去設定不同視窗吃不同JS檔案。
-    function loadJS(url) {
-            var script = document.createElement("script");
-            script.src = url;
-            document.head.appendChild(script);
-        }
-        if (window.innerWidth >= 768) {
-            // PC 版本
-            loadJS("JS/nav-onscroll-index.js");
-        } else {
-            // Mobile 版本
-            loadJS("JS/nav-onscroll-otherPage.js");
-        }
-</script>
 <button id="topBtn">TOP</button>
 </body>
 </html>

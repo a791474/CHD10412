@@ -432,11 +432,11 @@ footer{
 .shop_section h2{
     font-size: 40px;
     text-align: center;
-    font-family: "DFFangSongW6-B5";
     margin-top: 30px;
+    font-family: "DFFangSongW6-B5";
 }
 
-.category{
+.category, .category_1{
     margin: auto;
     display: grid;
     max-width: 1440px;
@@ -450,7 +450,7 @@ footer{
     height: 90%;
 }
 
-.category a img{
+.category a img, .category_1 a img{
     width: 100%;
     margin: auto;
     transform: scale(1);
@@ -458,6 +458,9 @@ footer{
 }
 
 .category a img:hover{
+    transform: scale(1.1);
+}
+.category_1 a img:hover{
     transform: scale(1.1);
 }
 
@@ -876,58 +879,24 @@ footer{
     max-width: 1440px;
     position: relative;
     display: flex;
+    flex-direction: column;
     margin: auto;
     font-family: 'Noto Sans TC', sans-serif;
 }
 
-.shops_body nav ul li{
-    position: relative;
-    display: flex;
-    justify-content: start;
-}
-
-.prod-sidebar{
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    position: sticky;
-    z-index: 15;
-    top: 0;
-    width: 104px;
-    height: 164px;
-}
-
-.prod-sidebar ul, .mb-prod-sidebar ul{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 18px;
-}
-
-.prod-sidebar ul li a, .mb-prod-sidebar ul li a{
-    color: #000;
-    font-size: 26px;
-    transition: all 0.3s linear;
-    text-decoration-color: transparent;
-}
-
-.prod-sidebar ul li a:hover{
-    text-decoration-color: #aaa;
-}
-
-.mb-prod-sidebar{
-    display: none;
-}
-
 .shops{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
-
+h2.mb-prod-category{
+    font-size: 40px;
+    text-align: start;
+    margin-top: 30px;
+    padding-left: 10px;
+}
 .shops h3{
     width: 100%;
     /* color: 	#BB3D00; */
