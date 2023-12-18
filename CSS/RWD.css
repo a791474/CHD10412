@@ -1,18 +1,5 @@
-/* ↓創造一個選取器↓ 意思為只要遇到叫做col-的class都做box-sizing、padding的屬性*/
-/* [class*="col-"]{ box-sizing: border-box; padding: 0 10px;} */
-/* 給最外面父層的值 */
-/* .col-1{width: 8.333333%;} */
-/* .col-2{width: 16.666666%;} */
 .col-3{width: 25%;}
-/* .col-4{width: 33.333333%;} */
-/* .col-5{width: 41.666666%;} */
-/* .col-6{width: 50%;} */
-/* .col-7{width: 58.333333%;} */
-/* .col-8{width: 66.666666%;} */
 .col-9{width: 75%;}
-/* .col-10{width: 83.333333%;} */
-/* .col-11{width: 91.666666%;} */
-/* .col-12{width: 100%;} */
 
 /* ↓768px~1024之間觸發↓ */
 @media (width <= 768px){
@@ -95,12 +82,13 @@
     }
     .view_all_1{
         bottom: -30px;
+        right: 5px;
         border: 1px solid #000;
         background-color: #EEE5DA;
     }
     .view_all_2{
         bottom: 10px;
-        right: 0;
+        right: 5px;
         border: 1px solid #000;
         background-color: #EEE5DA;
     }
@@ -478,34 +466,40 @@
     p.prod-info_price{
         font-size: 13px;
         margin-bottom: 10px;
-        /* display: none; */
     }
 /*-------------mb-購物車--------------- */
     .cart_container{
         display: flex;
         flex-wrap: wrap;
     }
+    .cart_container h1{
+        width: 100%;
+        font-size: 30px;
+        padding: 10px;
+        margin: 0 24.047px 10px 24.047px;
+    }
     .col-9{
-        width: 95%;
+        width: 100%;
         margin: 0 auto;
     }
-    .cart-prod{
-        padding: 0 3px;
-    }
     .cart-item{
-        gap: 0px;
-        margin: 10px 0;
+        gap: 15px;
+        margin: 10px auto;
     }
-    .detail-text h2{
-        font-size: 16px;
+    .cart-card-title span.name{
+        font-size: 18px;
         letter-spacing: 0;
         line-height: 20px;
     }
-    .detail-text span{
-        font-size: 14px;
+    .cart-card-title span{
+        font-size: 16px;
     }
-    .cart-btn input, .cart-btn input.qty{
+    .cart-inputs{
+        width: 100%;
+    }
+    .cart-inputs input, .cart-inputs input.qty{
         font-size: 18px;
+        width: 30%;
     }
     .col-3{
         width:100%
@@ -526,6 +520,10 @@
     .toPay{
         width: 95%;
         margin: 0 auto;
+    }
+    .toPay button{
+        color: #000;
+        background-color: #EEE5DA;
     }
     .toPay img{
         width: 10%; 
