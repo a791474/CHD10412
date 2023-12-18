@@ -21,60 +21,96 @@ function init(){
 }
 window.addEventListener("load", init, false);
 
+//add
+var adds = document.getElementsByClassName("btnPlus");
+//循環
+for (var i = 0; i < adds.length; i++) {
+    //單擊事件
+    adds[i].onclick = function () {
+        //1.獲取輸入框對象
+        var inputEle = this.previousElementSibling;
+        //2.獲取原來的值
+        var inputValue = inputEle.value;
+        //3.重新複製
+        inputEle.value = parseInt(inputValue) + 1;
 
-// 在 cart.html 中的 JavaScript 部分
-document.addEventListener('DOMContentLoaded', function () {
-    // 讀取 localStorage 中的購物車資訊
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        //計算金額
+        //1.數量
+        var number = parseInt(inputEle.value);
+        //2.單價
+        var commElement = this.closest('.item').querySelector(".qty");
+        if (commElement !== null) {
+            var price = parseFloat(commElement.textContent);
 
-    // 在頁面中顯示購物車中的商品
-    const cartContainer = document.getElementById('cartContainer');
+            //3.金額
+            var sum = number * price;
 
-    const cartItem = document.createElement('div');
-    cartItem.classList.add("cart-prod")
-        cartItem.innerHTML = `
-        <div class="cart-item">
-            <div class="item-pic">
-                <a href="product info.html">
-                    <img src="imgs/all shops - prod1.png" alt="購物車商品照">
-                </a>
-            </div>
-            <div class="cart-detail">
-                <div class="detail-text">
-                    <a href="product info.html">
-                        <h2>${item.title}</h2>
-                        <span>${item.price}</span>
-                    </a>
-                </div>
-                <div class="cart-btn">
-                    <input type="button" value="-" class="btnMinus">
-                    <input type="text" value="0" class="qty">
-                    <input type="button" value="+" class="btnPlus">
-                    <i class="fa-regular fa-trash-can btn-delete"></i>
-                </div>
-            </div>
-        </div>
-        `;
-    function displayCart() {
-        cartContainer.innerHTML = '';
+            //4.賦值 保留2位小數點->toFixed(2)
+            this.closest('.item').querySelector(".total").textContent = sum;
 
-    cart.forEach(item => {
-        // const cartItem = document.createElement('div');
-        // const cartItem.classList.add
-        // cartItem.innerHTML = `
-        //     <p>${item.title}</p>
-        //     <p>${item.price}</p>
-            
-        // `;
-        cartContainer.appendChild(productContainer);
-    });
+            //調用方法
+            getAmount();
+        } else {
+            console.error(".comm element not found!");
+        }
+    }
 }
-// 處理刪除商品的函式
-// window.removeFromCart = function (index) {
-//     cart.splice(index, 1);
-//     localStorage.setItem('cart', JSON.stringify(cart));
-//     displayCart();
-// };
-{/* <button onclick="removeFromCart(${index})">Remove</button> */}
-// displayCart();
-});
+
+//minus
+var minus = document.getElementsByClassName("minus");
+//循環
+for (var i = 0; i < minus.length; i++) {
+    //單擊事件
+    minus[i].onclick = function () {
+        //1.獲取輸入框對象
+        var inputEle = this.nextElementSibling;
+        //2.獲取原來的值
+        var inputValue = inputEle.value;
+        
+        //判斷
+        if (parseInt(inputValue) > 1) {
+            //3.重新複製
+            inputEle.value = parseInt(inputValue) - 1;
+
+
+            //計算金額
+            //1.數量
+            var number = parseInt(inputEle.value);
+            //2.單價
+            var commElement = this.closest('.item').querySelector(".comm");
+            if (commElement !== null) {
+                var price = parseFloat(commElement.textContent);
+
+                //3.金額
+                var sum = number * price;
+
+                //4.賦值 保留2位小數點->toFixed(2)
+                this.closest('.item').querySelector(".total").textContent = sum;
+
+                //調用方法
+                getAmount();
+            } else {
+                console.error(".comm element not found!");
+            }
+        }
+    }
+}
+
+
+
+//刪除品項
+var removeItems = document.getElementsByClassName("remove");
+//循環
+for (var i = 0; i < removeItems.length; i++) {
+    //點擊事件
+    removeItems[i].onclick = function () {
+        var itemToRemove = this.closest('.item');
+        if (itemToRemove !== null) {
+            itemToRemove.remove();
+            // 調用方法重新計算金額
+            getAmount();
+        } else {
+            // console.error("Item to remove not found!");
+        }
+    }
+}
