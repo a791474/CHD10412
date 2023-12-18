@@ -19,6 +19,10 @@
     <script src="JS/hb.js" defer></script>
     <!-- 登入燈箱的JS -->
     <script src="JS/loginLightBox.js" defer></script>
+    <!-- onScroll -->
+    <script src="JS/nav-onscroll-otherPage.js" defer></script>
+    <!-- prod-sidebar -->
+    <script src="JS/prod-sidebar.js"></script>
     <!-- FontAwesome icon導入 -->
     <script src="https://kit.fontawesome.com/080f2811bc.js"crossorigin="anonymous"></script>
     <script src="JS/jquery-3.7.1.js"></script>
@@ -144,38 +148,31 @@
 <!-- --------------------------------------------------------------- -->
 <div class="all-shops-container">
     <div class="shops_body">
-        <nav class="prod-sidebar">
-                <ul>
-                    <li>
-                        <a href="all_shops.html">和風系列</a>
-                    </li>
-                    <li>
-                        <a href="all_shops.html">洋風系列</a>
-                    </li>
-                    <li>
-                        <a href="all_shops.html">花瓶系列</a>
-                    </li>
-                    <li>
-                        <a href="all_shops.html">漆器系列</a>
-                    </li>
-                </ul>
-        </nav>
-        <nav class="mb-prod-sidebar">
-            <ul>
-                <li>
-                    <a href="all_shops.html">和風系列</a>
-                </li>
-                <li>
-                    <a href="all_shops.html">洋風系列</a>
-                </li>
-                <li>
-                    <a href="all_shops_2.html">花瓶系列</a>
-                </li>
-                <li>
-                    <a href="all_shops_2.html">漆器系列</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="shop_section_1">
+            <h2 class="mb-prod-category" onclick="toggleCategory()">商品分類 <b class="triangle"></b></h2>
+            <div class="category_1" id="categorySection">
+                <div class="category_pic">
+                    <a href="all_shops.html">
+                        <img src="imgs/category-1.png" alt="和風系列">
+                    </a>
+                </div>
+                <div class="category_pic">
+                    <a href="all_shops.html">
+                        <img src="imgs/category-2.png" alt="洋風系列">
+                    </a>
+                </div>
+                <div class="category_pic">
+                    <a href="all_shops.html">
+                        <img src="imgs/category-3.png" alt="花瓶系列">
+                    </a>
+                </div>
+                <div class="category_pic">
+                    <a href="all_shops_2.html">
+                        <img src="imgs/category-4.png" alt="漆器系列">
+                    </a>
+                </div>
+            </div>
+        </div>
 
     <div class="shops">
         <h3>和風系列</h3>
@@ -185,7 +182,7 @@
                 <img src="imgs/all shops - prod1.png" alt="全部商品照">
             </a>
             <p class="shops-card-text">
-                Noritake 三入盤組<br>NT$999
+                Nori 三入盤組<br>NT$999
             </p>
         </div>
         <div class="shops_pic">
@@ -219,7 +216,7 @@
                 <img src="imgs/all shops - prod6.png" alt="全部商品照">
             </a>
             <p class="shops-card-text">
-                Giovanni Valentino 茶杯<br>NT$1290
+                Giovanni 茶杯組<br>NT$1290
             </p>
         </div>
         <div class="shops_pic">
@@ -329,7 +326,6 @@
         </div>
     </div>
 </footer>
-<script src="JS/nav-onscroll-otherPage.js"></script>
 <button id="topBtn">TOP</button>
 </body>
 </html>
