@@ -547,10 +547,6 @@
         color: #000;
         background-color: #EEE5DA;
     }
-    .toPay img{
-        width: 10%; 
-        top: 17px;
-    }
 /*-------------mb-登入、註冊------------- */
     .login_container, .register_container{
         width: 80%;

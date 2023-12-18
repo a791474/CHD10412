@@ -679,7 +679,7 @@ footer{
     padding: 0 10px;
     font-size: 20px;
     line-height: 32px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .about_address p.PC{
@@ -733,10 +733,11 @@ footer{
     vertical-align: top;
 }
 
-.rside{ 
+.rside{
     width: 50%;
     margin:auto 0;
     display: flex;
+    position: relative;
     flex-direction: column;
     font-family: 'Noto Sans TC', sans-serif;
 }
@@ -769,14 +770,28 @@ footer{
 }
 
 .rside_read_more{
-    display: none;
-    height: 140px;
-    padding: 10px;
-    font-size: 40px;
-    border-right: 2px solid #000;
+    /* display: none; */
+    width: 33%;
+    display: flex;
+    font-size: 18px;
+    position: absolute;
+    top: 515px;
+    right: -58px;
+    ::after{
+        content: '→';
+    }
 }
 .rside_read_more_1{
     display: none;
+    width: 33%;
+    /* display: flex; */
+    font-size: 18px;
+    position: absolute;
+    top: 5px;
+    right: -20px;
+    ::after{
+        content: '→';
+    }
 }
 
 .rside_read_more a{
@@ -1390,12 +1405,6 @@ input.btnMinus:hover, input.btnPlus:hover{
     width: 100%;
     position: relative;
     padding-top: 10px;
-}
-
-.toPay img{
-    width: 15%;
-    top: 14px; right: 50px;
-    position: absolute;
 }
 
 .toPay button{
