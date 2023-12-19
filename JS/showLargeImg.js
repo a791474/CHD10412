@@ -10,7 +10,7 @@ function showLarge(e){//去指定事件物件發生的單位
         // 移除淡出效果，並添加淡入效果
         largeImg.classList.remove('fade-out');
         largeImg.classList.add('fade-in');
-    }, 200); // 淡出時間與 CSS transition 時間一致
+    }, 100); // 淡出時間與 CSS transition 時間一致
 }
 
 function init(){//將小圖們命一個class name

@@ -1,7 +1,5 @@
 .col-3{width: 25%;}
 .col-9{width: 75%;}
-
-/* ↓768px~1024之間觸發↓ */
 @media (width <= 768px){
 /*-------------mb-index-header-------------*/
     .navbar{
@@ -9,10 +7,9 @@
     }
     .index-title{
         width: 100%;
-        transform: translate(-62%,360%)
+        transform: translate(-67%,360%);
     }
     .index-title h1.PC{
-        
         font-size: 18px;
     }
     .menu_btn {
