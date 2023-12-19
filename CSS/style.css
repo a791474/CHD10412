@@ -3,7 +3,7 @@
 
 .index-container, .container{
     width: 100%;
-    /* position: relative; */
+    position: relative;
     z-index: 0;
 }
 
