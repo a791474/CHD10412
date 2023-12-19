@@ -262,8 +262,8 @@
         display: flex;
         font-size: 18px;
         position: absolute;
-        top: 0;
-        right: -8px;
+        top: 5px;
+        right: -21px;
         ::after{
             content: '→';
         }
@@ -482,7 +482,7 @@
         width: 100%;
         font-size: 30px;
         padding: 10px;
-        margin: 0 24.047px 10px 24.047px;
+        margin: 0 20px 10px 20px;
     }
     .col-9{
         width: 100%;
