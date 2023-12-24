@@ -63,7 +63,6 @@ function addToCart(title, price) {
     localStorage.setItem('cart', JSON.stringify(cart));
     // 顯示已加入購物車後跳轉到購物車頁面結帳
     window.alert('已加入購物車');
-    window.location.href = 'cart.html';
 }
 // ↓陣列增加商品內容
 // const products = [

@@ -15,6 +15,7 @@ header{
     background-size:contain;
     background-repeat: no-repeat;
     background-image: url(../imgs/index_header_bg.png);
+    position: relative;
 }
 
 .index-title{
@@ -26,7 +27,7 @@ header{
 }
 
 .index-title h1.PC{
-    width: 100%;
+    width: 108%;
     color: #666;
     font-size: 40px;
     text-align: center;
@@ -61,6 +62,7 @@ header{
     background-size:cover;
     background-repeat: no-repeat;
     background-image: url(../imgs/about\,news\,shop_bg.png);
+    position: relative;
 }
 
 .top-header{
@@ -73,7 +75,6 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* transition: transform 0.3s ease-out; */
     background-color: rgba(217,217,217,50%);
 
 }
@@ -83,15 +84,15 @@ header{
 }
 
 .title{
+    position: absolute;
+    transform: translate(-310%);
     top: 50%;
     right: 50%;
-    position: absolute;
-    transform: translate(-330%);
 }
 
 .title h1{
-    width: 100%;
-    font-size: 40px;
+    width: 108%;
+    font-size: 38px;
     font-family: "DFFangSongW6-B5";
 }
 
@@ -333,9 +334,9 @@ i.search_icons{
 }
 .close {
     position: absolute;
-    top: 30px;
-    right: 3px;
-    font-size: 30px;
+    top: 6%;
+    right: 0.5%;
+    font-size: 40px;
     cursor: pointer;
 }
 .error-message{
@@ -656,7 +657,7 @@ footer{
 }
 
 .about_pic{
-    width: 100%;
+    width: 90%;
 }
 
 .about_pic img{
@@ -693,7 +694,7 @@ footer{
 }
 
 .about_map{
-    width: 100%;
+    width: 90%;
 }
 
 .about_map iframe{
@@ -766,13 +767,13 @@ footer{
 }
 .rside_text p{
     font-size: 16px;
-    line-height: 28px;
+    line-height: 25px;
 }
 
 .rside_read_more{
-    /* display: none; */
+    display: none;
     width: 33%;
-    display: flex;
+    /* display: flex; */
     font-size: 18px;
     position: absolute;
     top: 515px;
