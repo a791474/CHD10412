@@ -194,7 +194,7 @@
         </div>
         
         <!-- 原本的HTML  -->
-    <!-- <div class="shops">
+    <div class="shops">
         <h3 id="cate4">漆器系列</h3>
         <p class="selection-info">深陷於我們的日式漆器系列，感受日本古老的漆藝傳承。每一件漆器都經過匠人精心製作，以特有的漆工技藝呈現出光澤感和觸感。這些漆器不僅實用，更是細緻的藝術品，為您的用餐體驗和居家空間注入獨特的日本風情。</p>
         <div class="shops_pic">
@@ -221,9 +221,10 @@
                 紅漆器盤<br>NT$990
             </p>
         </div>
-    </div> -->
-    <div id="shops">
-        <div class="shops" v-for="listItem in list">
+    </div>
+    
+    <!-- <div id="shops">
+        <div class="shops" v-for="listItem in aaa">
             <h3>{{ listItem.title }}</h3>
             <p class="selection-info">{{ listItem.description }}</p>
             <div class="shops_pic" v-for="(prodItem, index) in listItem.products">
@@ -235,7 +236,8 @@
                 </p>
             </div>
         </div>
-    </div>
+    </div> -->
+
 </div>
     <ul class="next-btn">
         <a href="all_shops.html">
@@ -312,8 +314,8 @@
 </footer>
 <button id="topBtn">TOP</button>
 
-<script src="https://unpkg.com/vue@next"></script>
-<script>
+<!-- <script src="https://unpkg.com/vue@next"></script> -->
+<!-- <script>
     Vue.createApp({
     data() {
         return {
@@ -322,16 +324,17 @@
             title: "漆器系列",
             description: "深陷於我們的日式漆器系列，感受日本古老的漆藝傳承。每一件漆器都經過匠人精心製作，以特有的漆工技藝呈現出光澤感和觸感。這些漆器不僅實用，更是細緻的藝術品，為您的用餐體驗和居家空間注入獨特的日本風情。",
             products: [
-                { name: "百華漆器碗", price: "NT$300", image: "../imgs/all shops - prod10.png", alt: "全部商品照" },
-                { name: "日式雙層重箱盒", price: "NT$1500", image: "../imgs/all shops - prod11.png", alt: "全部商品照" },
-                { name: "紅漆器盤", price: "NT$990", image: "../imgs/all shops - prod12.png", alt: "全部商品照" },
+                // { name: "百華漆器碗", price: "NT$300", image: "./imgs/all shops - prod10.png", alt: "全部商品照" },
+                { name: "百華漆器碗", price: "NT$300", image: "./imgs/all shops - prod10.png", alt: "全部商品照" },
+                { name: "日式雙層重箱盒", price: "NT$1500", image: "./imgs/all shops - prod11.png", alt: "全部商品照" },
+                { name: "紅漆器盤", price: "NT$990", image: "./imgs/all shops - prod12.png", alt: "全部商品照" },
             ],
         },
         ],
     };
 },
 }).mount("#shops");
-</script>
+</script> -->
 
 </body>
 </html>
